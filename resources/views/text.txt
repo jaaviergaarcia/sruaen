@@ -1,0 +1,10 @@
+ <?php foreach ($query -> result() as $row) { ?>
+                        <tr>
+                            <td> <?php echo $row->id ?></td>
+                            <td><?php echo $row->nombre_prof ?></td>
+                            <td><?php echo $row->lastname ?></td>
+                            <td><?php echo $row->email ?></td>
+                            <td><?php echo $row->pass ?></td>
+                        </tr>
+                        
+                    <?php } ?>
