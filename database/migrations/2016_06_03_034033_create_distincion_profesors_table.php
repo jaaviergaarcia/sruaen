@@ -23,7 +23,7 @@ class CreateDistincionProfesorsTable extends Migration {
 			$table->foreign('distincion_id')->references('id')->on('distincions');
 			$table->timestamps();
 		});
-	}
+	} 
 
 	/**
 	 * Reverse the migrations.

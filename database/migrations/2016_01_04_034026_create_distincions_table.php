@@ -22,7 +22,7 @@ class CreateDistincionsTable extends Migration {
 			$table->string('institucion');
 			$table->string('pais');
 			$table->string('descripcion');
-			$table->timestamps();
+			$table->timestamps(); 
 		});
 	}
 

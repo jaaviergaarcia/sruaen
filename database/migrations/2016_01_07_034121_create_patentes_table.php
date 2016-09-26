@@ -25,7 +25,7 @@ class CreatePatentesTable extends Migration {
 			$table->string('tipo_pat');
 			$table->string('edo_pat');
 			$table->timestamps();
-		});
+		}); 
 	}
 
 	/**

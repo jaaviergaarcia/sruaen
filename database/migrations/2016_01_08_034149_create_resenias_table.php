@@ -26,7 +26,7 @@ class CreateReseniasTable extends Migration {
 			$table->integer('pos_autor');
 			$table->string('lista_autor');
 			$table->timestamps();
-		});
+		}); 
 	}
 
 	/**

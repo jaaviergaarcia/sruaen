@@ -28,7 +28,7 @@ class CreateProfesorsTable extends Migration {
 			$table->string('est_acad');
 			$table->string('cuerpo_acad');
 			$table->string('lgac');
-			$table->timestamps();
+			$table->timestamps(); 
 
 		});
 	}

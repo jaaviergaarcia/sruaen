@@ -24,7 +24,7 @@ class CreateLibrosTable extends Migration {
 			$table->integer('pos_autor');
 			$table->string('lista');
 			$table->integer('isbn');
-			$table->timestamps();
+			$table->timestamps(); 
 		});
 	}
 

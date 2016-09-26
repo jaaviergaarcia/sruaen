@@ -23,7 +23,7 @@ class CreateInformesTable extends Migration {
 			$table->string('varios_autores');
 			$table->integer('pos_autor');
 			$table->string('lista_autor');
-			$table->timestamps();
+			$table->timestamps(); 
 		});
 	}
 

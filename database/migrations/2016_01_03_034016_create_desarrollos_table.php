@@ -24,7 +24,7 @@ class CreateDesarrollosTable extends Migration {
 			$table->string('tipo');
 			$table->string('sector');
 			$table->string('pais');
-			$table->timestamps();
+			$table->timestamps(); 
 		});
 	}
 

@@ -24,7 +24,7 @@ class CreateTutoriasTable extends Migration {
 			$table->string('institucion_prof');
 			$table->timestamps();
 		});
-	}
+	} 
 
 	/**
 	 * Reverse the migrations.

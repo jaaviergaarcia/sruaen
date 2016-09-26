@@ -25,7 +25,7 @@ class CreateArticulosTable extends Migration {
 		    $table->string('autores');
 		    $table->integer('pos_autor');
 		    $table->string('lista_autor');
-			$table->timestamps();
+			$table->timestamps(); 
 	    });
 	}
 
