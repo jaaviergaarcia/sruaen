@@ -33,7 +33,7 @@ class InformeController extends Controller {
 		}
 
 		return redirect('informes');  // esta ruta corresponde a la function del mismo nombre pues en su return el valor es la vista cargada del sistema
-	}
+	} 
 
 	public function informes()
 	{
@@ -52,14 +52,14 @@ class InformeController extends Controller {
 	{
 		$informe = Informe::find($id);
 
-		$informe->fecha_pub= $request->input('fecha_pub');
-		$informe->autor= $request->input('autor');
-		$informe->titulo_info= $request->input('titulo_info');
-		$informe->institucion= $request->input('institucion');
-		$informe->autor_princ= $request->input('autor_princ');
-		$informe->varios_autores= $request->input('varios_autores');
-		$informe->pos_autor= $request->input('pos_autor');
-		$informe->lista_autor= $request->input('lista_autor');
+		$informe->fecha_pub = $request->input('fecha_pub');
+		$informe->autor = $request->input('autor');
+		$informe->titulo_info = $request->input('titulo_info');
+		$informe->institucion = $request->input('institucion');
+		$informe->autor_princ = $request->input('autor_princ');
+		$informe->varios_autores = $request->input('varios_autores');
+		$informe->pos_autor = $request->input('pos_autor');
+		$informe->lista_autor = $request->input('lista_autor');
 
 		if ($informe->save())
 		{

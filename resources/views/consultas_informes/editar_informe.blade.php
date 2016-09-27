@@ -8,7 +8,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-        Actualizaci&oacuten de datos de los Informes/Reportes Tecnicos
+        Actualización de datos de los Informes/Reportes Técnicos
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -16,7 +16,8 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal"  role ="form-horizontal" method="POST" enctype="multipart/form-data"   action="{{URL::to('actualizar_informe/').'/'.$informe->id}}" >
+              <form class="form-horizontal" role="form-horizontal" method="POST"   
+              action="{{URL::to('actualizar_informe/').'/'.$informe->id}}" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">

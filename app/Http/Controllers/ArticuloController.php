@@ -75,10 +75,10 @@ class ArticuloController extends Controller {
 
 		if ($articulo->save())
 		{
-			Session::flash('message','El articulo ha sido guardado Correctamente');
+			Session::flash('message','El articulo "'.$articulo->titulo_art.'" ha sido guardado Correctamente');
 			
 		} else {
-			Session::flash('message','Hubo un error al intentar guardar el usuario vuleva a intentarlo');
+			Session::flash('message','Hubo un error al intentar guardar el articulo "'.$articulo->titulo_art.'" vuleva a intentarlo');
 		
 		}
 

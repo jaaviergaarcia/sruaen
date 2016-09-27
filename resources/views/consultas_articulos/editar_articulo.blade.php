@@ -16,7 +16,8 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal" role="form-horizontal" method="POST" enctype="multipart/form-data"  action="{{URL::to('actualizar_articulo/').'/'.$articulo->id}}" >
+              <form class="form-horizontal" role="form-horizontal" method="POST" enctype="multipart/form-data"  
+              action="{{URL::to('actualizar_articulo/').'/'.$articulo->id}}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">
@@ -24,57 +25,57 @@
                   <div class="col-sm-8">
                     <select class="selectpicker" data-style="btn-primary" name="fecha_pub" required="">
                         <option selected disabled value="000">Seleccione una opcion</option>
-                      @if($articulo -> fecha_pub == 2011)
-                        <option value="2011" selected="selected" class="selectpicker">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                      @endif
+                        @if($articulo -> fecha_pub == 2011)
+                          <option value="2011" selected="selected" class="selectpicker">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                        @endif
 
-                      @if($articulo -> fecha_pub == 2012)
-                        <option value="2011">2011</option>
-                        <option value="2012" selected="selected" class="selectpicker" >2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                      @endif
-                      @if($articulo -> fecha_pub == 2013)
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013" selected="selected" class="selectpicker">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                      @endif
+                        @if($articulo -> fecha_pub == 2012)
+                          <option value="2011">2011</option>
+                          <option value="2012" selected="selected" class="selectpicker" >2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                        @endif
+                        @if($articulo -> fecha_pub == 2013)
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013" selected="selected" class="selectpicker">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                        @endif
 
-                      @if($articulo -> fecha_pub == 2014)
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014"selected="selected" class="selectpicker" >2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                      @endif
-                      @if($articulo -> fecha_pub == 2015)
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015" selected="selected" class="selectpicker">2015</option>
-                        <option value="2016">2016</option>
-                      @endif
+                        @if($articulo -> fecha_pub == 2014)
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014"selected="selected" class="selectpicker" >2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                        @endif
+                        @if($articulo -> fecha_pub == 2015)
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015" selected="selected" class="selectpicker">2015</option>
+                          <option value="2016">2016</option>
+                        @endif
 
-                      @if($articulo -> fecha_pub == 2016)
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016" selected="selected" class="selectpicker">2016</option>
-                      @endif
+                        @if($articulo -> fecha_pub == 2016)
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016" selected="selected" class="selectpicker">2016</option>
+                        @endif
                       </select>                  
                   </div>
                 </div>

@@ -69,15 +69,14 @@ Route::get('nuevo_articulo','ArticuloController@nuevo_articulo');
 Route::post('guardar_articulo','ArticuloController@guardar_articulo');
 Route::get('articulos','ArticuloController@articulos');  //vista de los almacenados
 Route::get('editar_articulos/{id}','ArticuloController@editar_articulos');
-Route::post('actualizar_articulo/{id}','ArticuloController@actualizar_usuario');
+Route::post('actualizar_articulo/{id}','ArticuloController@actualizar_articulo');
 Route::get('eliminar_articulo/{id}','ArticuloController@eliminar_articulo');
-
-
 
 
 /*PARA EL MODELO DE DISTINCION*/
 Route::get('nueva_distincion','DistincionController@nueva_distincion');
 Route::post('guardar_distincion','DistincionController@guardar_distincion');
+Route::get('premios','DistincionController@premios');
 
 
 /*
@@ -87,16 +86,23 @@ Route::post('guardar_distincion','DistincionController@guardar_distincion');
 */
 Route::get('nuevo_informe','InformeController@nuevo_informe');
 Route::post('guardar_informe','InformeController@guardar_informe');
-Route::get('informes','InformeController@informes');
+Route::get('informes','InformeController@informes');             //vista de los informes almacenados
 Route::get('editar_informe/{id}','InformeController@editar_informe');
 Route::post('actualizar_informe/{id}','InformeController@actualizar_informe');
 
-/*PARA EL MODELO DE LIBRO*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS PARA EL MODELO LIBRO
+|--------------------------------------------------------------------------
+*/
 
 Route::get('nuevo_libro','LibroController@nuevo_libro');
 Route::post('guardar_libro','LibroController@guardar_libro');
 Route::get('libros','LibroController@libros');    //vista de los almacenados
 Route::get('editar_libro/{id}','LibroController@editar_libro');
+Route::post('actualizar_libro/{id}','LibroController@actualizar_libro');
+Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
+
 
 
 

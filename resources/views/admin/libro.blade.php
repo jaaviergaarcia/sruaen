@@ -16,7 +16,7 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal"method="post" action="guardar_libro" enctype="multipart/form-data">
+              <form class="form-horizontal" method="post" action="guardar_libro" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 

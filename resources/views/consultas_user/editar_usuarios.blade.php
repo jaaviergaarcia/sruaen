@@ -16,7 +16,8 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal" role="form-horizontal" method="post" action="{{URL::to('actualizar_usuario/').'/'.$profesor->id}}" enctype="multipart/form-data">
+              <form class="form-horizontal" role="form-horizontal" method="post" 
+              action="{{URL::to('actualizar_usuario/').'/'.$profesor->id}}" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">

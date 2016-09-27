@@ -5,7 +5,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-title">
-          Profesores
+          Listado de Distinciones y/o Premios otorgados a los Maestros y Doctores incorporados  en SUAEN 
         </div>
         <div class="panel-body table-responsive">
         @if(Session::has('message'))
@@ -14,31 +14,32 @@
                  {{ Session::get('message')}} 
           </div>
         @endif
-
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>
-                        <th>Id </th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Email</th>
-                        <th>Tipo</th>
-                        <th>Grupo Lab</th>
-                        <th>Operación</th>           
+                        <th>No.</th>
+                        <th>Fecha</th>
+                        <th>Autor</th>
+                        <th>Distincion/Premio</th>
+                        <th>Institución</th>
+                        <th>País</th>  
+                        <th>Descripción</th>    
+                        <th>Operación</th>
                     </tr>
                 </thead>
-                @foreach ($profesors as $profesor)
+                @foreach ($premios as $premio)
                     <tbody>
                         <tr>
-                            <td>{{$profesor-> id}}</td>
-                            <td>{{$profesor-> nombre_prof}}</td>
-                            <td>{{$profesor-> lastname}}</td>
-                            <td>{{$profesor-> email}}</td>
-                            <td>{{$profesor-> tipo}}</td> 
-                            <td>{{$profesor-> gpo_lab}}</td>
+                            <td>{{$premio-> id}}</td>
+                            <td>{{$premio-> fecha}}</td>
+                            <td>{{$premio-> nombre_prof}}</td>
+                            <td>{{$premio-> distincion}}</td>
+                            <td>{{$premio-> institucion}}</td> 
+                            <td>{{$premio-> pais}}</td>
+                            <td>{{$premio-> descripcion}}</td>
                             <td>
-                               <a  href="editar_usuario/{{$profesor->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                               <a  href="eliminar_usuario/{{$profesor->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_informe/{{$informe->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
+                               <a  href="eliminar_informe/{{$informe->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>
