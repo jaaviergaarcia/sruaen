@@ -11,16 +11,12 @@ use App\Profesor;
 class ProfesorController extends Controller {
 
 	public function nuevo_profesor(){
-
 		return view('admin.user');
 	}
 
-
 	public function guardar_profesor(Request $request){
 
-
 		$profesor = new Profesor;
-
 		//variable propiedad name            campo de la BD
 		//declaracion de variables que se mandan a la base
 		$profesor->nombre_prof = $request->input('nombre_prof');
@@ -36,8 +32,6 @@ class ProfesorController extends Controller {
 		$profesor->est_acad = $request->input('est_acad');
 		$profesor->cuerpo_acad = $request->input('cuerpo_acad');
 		$profesor->lgac = $request->input('lgac');
-
-		// $profesor->save();
 
 		if ($profesor->save())
 		{

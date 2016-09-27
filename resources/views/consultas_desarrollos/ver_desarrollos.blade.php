@@ -5,7 +5,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-title">
-          Listado de Distinciones y/o Premios otorgados a los Maestros y Doctores incorporados  en SUAEN 
+          Listado de Desarrollos 
         </div>
         <div class="panel-body table-responsive">
         @if(Session::has('message'))
@@ -14,7 +14,7 @@
                  {{ Session::get('message')}} 
           </div>
         @endif
-            <table id="example0" class="table display"> 
+            <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>
                         <th>No.</th>
