@@ -25,9 +25,51 @@ class InformeController extends Controller {
 		$informe->pos_autor= $request->input('pos_autor');
 		$informe->lista_autor= $request->input('lista_autor');
 
-		$informe->save();
+		if ($informe->save())
+		{
+			Session::flash('message','El informe ha sido guardado correctamente');
+		} else {
+			Session::flash('message','Hubo un error al intentar guardar el informe, intentelo nuevamente, si el problema continua contacte al equipo de soporte.');
+		}
 
-		return redirect('nuevo_informe');
+		return redirect('informes');  // esta ruta corresponde a la function del mismo nombre pues en su return el valor es la vista cargada del sistema
+	}
+
+	public function informes()
+	{
+		$informes = Informe::All();
+		return view('consultas_informes.ver_informes',compact('informes'));
+	} 
+
+	public function editar_informe($id)
+	{
+		$informe = Informe::find($id);
+		return view('consultas_informes.editar_informe',compact('informe'));
+
+	}
+
+	public function actualizar_informe($id, Request $request)
+	{
+		$informe = Informe::find($id);
+
+		$informe->fecha_pub= $request->input('fecha_pub');
+		$informe->autor= $request->input('autor');
+		$informe->titulo_info= $request->input('titulo_info');
+		$informe->institucion= $request->input('institucion');
+		$informe->autor_princ= $request->input('autor_princ');
+		$informe->varios_autores= $request->input('varios_autores');
+		$informe->pos_autor= $request->input('pos_autor');
+		$informe->lista_autor= $request->input('lista_autor');
+
+		if ($informe->save())
+		{
+			Session::flash('message','El informe ha sido actualizado correctamente');
+		} else {
+			Session::flash('message','Hubo un error al intentar actualizar el informe, intentelo nuevamente, si el problema continua contacte al equipo de soporte.');
+		}
+
+		return redirect('informes');
+
 	}
 
 

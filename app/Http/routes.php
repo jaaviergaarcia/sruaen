@@ -23,6 +23,7 @@ use App\Resenia;
 */
 
 
+
 //rutas para los middleware
 /*
 Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
@@ -31,8 +32,11 @@ Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
 
 /*route::get('vista','controlador@nombre_de_funcion:')*/
 
-
-/*RUTAS PARA EL INICIO DE SESION*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS PARA EL INICIO DE SESION
+|--------------------------------------------------------------------------
+*/
 Route::get('/', 'LoginController@mostrarinicio_sesion');
 Route::post('entrar','LoginController@entrar');
 Route::get('logout','LoginController@logout');
@@ -41,8 +45,11 @@ Route::get('logout','LoginController@logout');
 
 /*RUTAS PARA EL ADMIN ¿?*/
 Route::get('admin','AdminController@admin');
-
-/*PARA EL MODELO DE PROFESOR-USUARIO*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS MODELO PROFESOR-USUARIO
+|--------------------------------------------------------------------------
+*/
 Route::get('nuevo_profesor','ProfesorController@nuevo_profesor');
 Route::post('guardar_profesor','ProfesorController@guardar_profesor');
 Route::get('ver_usuarios','ProfesorController@ver_usuarios');
@@ -51,7 +58,11 @@ Route::post('actualizar_usuario/{id}','ProfesorController@actualizar_usuario');
 Route::get('eliminar_usuario/{id}','ProfesorController@eliminar_usuario');
 
 
-/*PARA EL MODELO DE ARTICULO*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS MODELO ARTICULO
+|--------------------------------------------------------------------------
+*/
 
 //Route::get('articulo','AdminController@articulo');
 Route::get('nuevo_articulo','ArticuloController@nuevo_articulo');
@@ -69,10 +80,16 @@ Route::get('nueva_distincion','DistincionController@nueva_distincion');
 Route::post('guardar_distincion','DistincionController@guardar_distincion');
 
 
-
-/*PARA EL MODELO DE INFORME*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS PARA EL MODELO INFORME
+|--------------------------------------------------------------------------
+*/
 Route::get('nuevo_informe','InformeController@nuevo_informe');
 Route::post('guardar_informe','InformeController@guardar_informe');
+Route::get('informes','InformeController@informes');
+Route::get('editar_informe/{id}','InformeController@editar_informe');
+Route::post('actualizar_informe/{id}','InformeController@actualizar_informe');
 
 /*PARA EL MODELO DE LIBRO*/
 

@@ -8,7 +8,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-        Actualización de datos de los Articulos por Profesor Por año
+        Actualizaci&oacuten de datos de los Articulos por Profesor Por año
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -119,8 +119,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Autor:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Nombre del autor" name="autor" required="" 
-                    value="{{$articulo->autor}}">
+                    <input type="text" class="form-control form-control-line" placeholder="Nombre del autor" name="autor" required=""  value="{{$articulo->autor}}">
                   </div>
                 </div>
 
@@ -194,7 +193,7 @@
                 <div class="form-group">
                  <label class="col-sm-2 control-label form-label"></label>
                   <div class="col-sm-4">
-                      <button type="submit" class="btn btn-default btn-block">Guardar</button>             
+                      <button type="submit" class="btn btn-default btn-block">Actualizar</button>             
                   </div>
                 </div>
 

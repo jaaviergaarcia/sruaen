@@ -31,12 +31,12 @@ class ArticuloController extends Controller {
 		$articulo->pos_autor = $request->input('pos_autor');
 		$articulo->lista_autor = $request->input('lista_autor');
 
-		if ($articulo->save())
+		if ($articulo->save())  
 		{
 			Session::flash('message','El articulo ha sido guardado Correctamente');
 			
 		} else {
-			Session::flash('message','Hubo un error al intentar guardar el usuario vuleva a intentarlo');
+			Session::flash('message','Hubo un error al intentar guardar el articulo vuleva a intentarlo');
 		
 		}
 
