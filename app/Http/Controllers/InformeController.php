@@ -13,7 +13,7 @@ class InformeController extends Controller {
 	}
 
 	public function guardar_informe(Request $request){
-
+ 
 		$informe = new Informe;
 
 		$informe->fecha_pub= $request->input('fecha_pub');
