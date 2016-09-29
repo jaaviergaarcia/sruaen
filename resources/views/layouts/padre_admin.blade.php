@@ -85,7 +85,7 @@
   </li>
   <li><a href="#"><span class="icon color11"><i class="fa fa-file-o"></i></span>Reseñas<span class="caret"></span></a>
   <ul>
-      <li><a href="resena"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="nueva_resenia"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-copyright"></i></span>Patentes<span class="caret"></span></a>
@@ -122,7 +122,7 @@
         <li><a href="../informes">Informes</a></li>
         <li><a href="../premios">Distinciones/Premios</a></li>
         <li><a href="#">Desarrollos</a></li>
-        <li><a href="#">Reseñas</a></li>
+        <li><a href="../resenias">Reseñas</a></li>
         <li><a href="#">Patentes</a></li>
         <li><a href="#">Trabajos</a></li>
         <li><a href="#">Tutorias</a></li>

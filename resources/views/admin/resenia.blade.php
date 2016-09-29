@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+
 @section('content')
 <!-- Start Row -->
   <div class="row">
@@ -15,8 +16,9 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal">
-
+              <form class="form-horizontal" method="post" action="guardar_resenia" enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Año de Publicacion:</label>
                   <div class="col-sm-8">

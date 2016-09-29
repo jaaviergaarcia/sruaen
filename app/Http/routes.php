@@ -102,17 +102,22 @@ Route::post('actualizar_libro/{id}','LibroController@actualizar_libro');
 Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
 
 
-
-
-
-
-
-
-/* PARA EL MODELO DE DESARROLLO*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS PARA EL MODELO DESARROLLO
+|--------------------------------------------------------------------------
+*/
 Route::get('nuevo_desarrollo','DesarrolloController@nuevo_desarrollo');
 Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 
 
+/*
+|--------------------------------------------------------------------------
+| RUTAS PARA EL MODELO RESEÑIAS
+|--------------------------------------------------------------------------
+*/
+Route::get('nueva_resenia','ReseniaController@nueva_resenia');
+Route::post('guardar_resenia','ReseniaController@guardar_resenia');
 
 
 /*****************************************/
@@ -121,7 +126,7 @@ Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 //Route::get('informe','AdminController@informe');
 //Route::get('distincion','AdminController@distincion');
 //Route::get('desarrollo','AdminController@desarrollo');
-Route::get('resena','AdminController@resena');
+//Route::get('resena','AdminController@resena');
 Route::get('patente','AdminController@patente');
 Route::get('trabajo','AdminController@trabajo');
 
