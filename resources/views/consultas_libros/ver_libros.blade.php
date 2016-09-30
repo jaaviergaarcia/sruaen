@@ -17,7 +17,7 @@
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>
-                        <th>Id </th>
+                        <th>No</th>
                         <th>Año</th>
                         <th>Tipo del Libro</th>
                         <th>Autor</th>

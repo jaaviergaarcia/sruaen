@@ -17,35 +17,37 @@
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>
-                        <th>Id </th>
+                        <th>No</th>
                         <th>Año</th>
-                        <th>Tipo del Articulo</th>
+                        <th>Reseñas</th>
                         <th>Autor</th>
-                        <th>Titulo del Articulo</th>
-                        <th>Revista</th>
-                        <th>Autor Principal</th>  
-                        <th>Varios Autores</th>  
-                        <th>Pos del Autor</th>   
-                        <th>Lista de autores</th>  
+                        <th>Titulo de la reseña</th>
+                        <th>Titulo de la Obra</th>
+                        <th>Pa&iacutes</th>  
+                        <th>Autor Princ</th>  
+                        <th>Autores</th>   
+                        <th>Pos del Autor</th>
+                        <th>Lista Autores</th>
                         <th>Operacion</th>        
                     </tr>
                 </thead>
-                @foreach ($articulos as $articulo)
+                @foreach ($resenias as $resenia)
                     <tbody>
                         <tr>
-                            <td>{{$articulo-> id}}</td>
-                            <td>{{$articulo-> fecha_pub}}</td>
-                            <td>{{$articulo-> tipo_art}}</td>
-                            <td>{{$articulo-> autor}}</td>
-                            <td>{{$articulo-> titulo_art}}</td> 
-                            <td>{{$articulo-> revista}}</td>
-                            <td>{{$articulo-> principal}}</td>
-                            <td>{{$articulo-> autores}}</td>
-                            <td>{{$articulo-> pos_autor}}</td>
-                            <td>{{$articulo-> lista_autor}}</td>
+                            <td>{{$resenia-> id}}</td>
+                            <td>{{$resenia-> fecha_pub}}</td>
+                            <td>{{$resenia-> resenias}}</td>
+                            <td>{{$resenia-> autor_res}}</td>
+                            <td>{{$resenia-> tit_res}}</td> 
+                            <td>{{$resenia-> tit_obra}}</td>
+                            <td>{{$resenia-> pais}}</td>
+                            <td>{{$resenia-> autor_princ}}</td>
+                            <td>{{$resenia-> varios_aut}}</td>
+                            <td>{{$resenia-> pos_autor}}</td>
+                            <td>{{$resenia-> lista_autor}}</td>
                             <td>
-                               <a  href="editar_articulos/{{$articulo->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                               <a  href="eliminar_articulo/{{$articulo->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_articulos/{{$resenia->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
+                               <a  href="eliminar_articulo/{{$resenia->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>

@@ -17,7 +17,7 @@
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>
-                        <th>No.</th>
+                        <th>No</th>
                         <th>Fecha</th>
                         <th>Autor</th>
                         <th>Distincion/Premio</th>

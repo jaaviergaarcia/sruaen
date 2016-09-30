@@ -17,7 +17,7 @@
             <table id="example0" class="table display"> 
                 <thead class="thead-inverse">
                     <tr>
-                        <th>No.</th>
+                        <th>No</th>
                         <th>Fecha</th>
                         <th>Autor</th>
                         <th>Distincion/Premio</th>
@@ -38,8 +38,8 @@
                             <td>{{$premio-> pais}}</td>
                             <td>{{$premio-> descripcion}}</td>
                             <td>
-                               <a  href="editar_informe/{{$informe->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                               <a  href="eliminar_informe/{{$informe->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_informe/{{$premio->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
+                               <a  href="eliminar_informe/{{$premio->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>

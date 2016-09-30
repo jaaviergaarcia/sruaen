@@ -27,6 +27,7 @@ class ReseniaController extends Controller {
 		$resenia->autor_princ = $request->input('autor_princ');
 		$resenia->varios_aut = $request->input('varios_aut');
 		$resenia->pos_autor = $request->input('pos_autor');
+		$resenia->lista_autor = $request->input('lista_autor');
 
 		if ($resenia-> save())
 		{
@@ -35,7 +36,20 @@ class ReseniaController extends Controller {
 			Session::flash('message','Hubo un problema al intentar guardar la resenia intentelo de nuevo si el problema persiste pongase en contacto con su administrador');
 		}
 
-		return view ('nueva_resenia');
+		return redirect ('resenias');
+
+	}
+
+	public function resenias()
+	{
+		$resenias = Resenia::All();
+		return view('consultas_resenias.ver_resenias',compact('resenias'));
+	}
+
+	public function editar_resenias($id)
+	{
+		$resenia = Resenia::find($id);
+		return view ('consultas_resenias.editar_resenias',compact('resenia'));
 
 	}
 

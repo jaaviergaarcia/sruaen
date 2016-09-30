@@ -18,7 +18,7 @@
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>
-                        <th>Id </th>
+                        <th>No</th>
                         <th>Nombre</th>
                         <th>Apellidos</th>
                         <th>Email</th>

@@ -28,7 +28,6 @@ Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
     return '<h1>Hey everybody this shit is vvorking!!</h1>';
 }]); */
 
-/*route::get('vista','controlador@nombre_de_funcion:')*/
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +54,6 @@ Route::get('editar_usuario/{id}','ProfesorController@editar_usuario');
 Route::post('actualizar_usuario/{id}','ProfesorController@actualizar_usuario');
 Route::get('eliminar_usuario/{id}','ProfesorController@eliminar_usuario');
 
-
 /*
 |--------------------------------------------------------------------------
 | RUTAS MODELO ARTICULO
@@ -74,7 +72,7 @@ Route::get('eliminar_articulo/{id}','ArticuloController@eliminar_articulo');
 /*PARA EL MODELO DE DISTINCION*/
 Route::get('nueva_distincion','DistincionController@nueva_distincion');
 Route::post('guardar_distincion','DistincionController@guardar_distincion');
-Route::get('premios','DistincionController@premios');				//vista de los almacenados
+Route::get('distinciones','DistincionController@distinciones');				//vista de los almacenados
 
 
 /*
@@ -118,6 +116,8 @@ Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 */
 Route::get('nueva_resenia','ReseniaController@nueva_resenia');
 Route::post('guardar_resenia','ReseniaController@guardar_resenia');
+Route::get('resenias','ReseniaController@resenias');
+Route::get('editar_resenia','ReseniaController@editar_resenia');
 
 
 /*****************************************/

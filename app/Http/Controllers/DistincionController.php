@@ -32,14 +32,13 @@ class DistincionController extends Controller {
 		 	Session::flash('message','Se produjo un error al tratar de almanenar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
 		 }
 
-		return redirect('premios');
+		return redirect('distinciones');
 	}
 
-	public function premios()
+	public function distinciones()
 	{
 		$premios = Distincion::All();
-		return view('consultas_distincions.ver_distincions',compact('premios'));
-
+		return view('consultas_resenias.ver_resenias',compact('premios'));
 	}
 
 }

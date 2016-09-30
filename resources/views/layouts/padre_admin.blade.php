@@ -120,7 +120,7 @@
         <li><a href="../articulos">Articulos</a></li>
         <li><a href="../libros">Libros</a></li>
         <li><a href="../informes">Informes</a></li>
-        <li><a href="../premios">Distinciones/Premios</a></li>
+        <li><a href="../distinciones">Distinciones/Premios</a></li>
         <li><a href="#">Desarrollos</a></li>
         <li><a href="../resenias">Reseñas</a></li>
         <li><a href="#">Patentes</a></li>
