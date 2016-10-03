@@ -34,7 +34,7 @@ Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
 | RUTAS PARA EL INICIO DE SESION
 |--------------------------------------------------------------------------
 */
-Route::get('login', 'LoginController@mostrarinicio_sesion');
+Route::get('/', 'LoginController@mostrarinicio_sesion');
 Route::post('entrar','LoginController@entrar');
 Route::get('logout','LoginController@logout');
 

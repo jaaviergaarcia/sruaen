@@ -38,13 +38,24 @@ class LoginController extends Controller {
 				Session::put('tipo',$profesor->tipo);
 
 
+				switch ($profesor->tipo) {
+					case 'A':
+						return redirect('ver_usuarios');
+						break;
+					
+					case 'C':
+						return redirect('admin');
+						break;
+				}
+
+
 				//@if    @endif y se eliminan los {}
-				if ($profesor->tipo =='A') 
+				 /*if ($profesor->tipo =='A') 
 				{
 					//Si entra a esta vista el usuario que entro es un administrador
 					return redirect('ver_usuarios');
 
-				}//segundo if
+				}//segundo if */
 
 			}//primer if
 			
@@ -52,8 +63,8 @@ class LoginController extends Controller {
 
 		//Sesion::flash sirve para enviar/mostrar mensajes 
 
-	Session::flash('message','Correo o contraseña incorrecto, verique su datos ');
-	return redirect('login');
+	Session::flash('message','Correo o contraseña incorrecto, verique que sus datos sean correctos.');
+	return redirect('/');
 
 
 	} //end function entrar
