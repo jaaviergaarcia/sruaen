@@ -53,6 +53,47 @@ class ReseniaController extends Controller {
 
 	}
 
+	public function actualizar_resenia($id, Request $request)
+	{
+		$resenia = Resenia::find($id);
+
+		$resenia->fecha_pub = $request->input('fecha_pub');
+		$resenia->resenias = $request->input('resenias');
+		$resenia->autor_res = $request->input('autor_res');
+		$resenia->tit_res = $request->input('tit_res');
+		$resenia->tit_obra = $request->input('tit_obra');
+		$resenia->pais = $request->input('pais');
+		$resenia->autor_princ = $request->input('autor_princ');
+		$resenia->varios_aut = $request->input('varios_aut');
+		$resenia->pos_autor = $request->input('pos_autor');
+		$resenia->lista_autor = $request->input('lista_autor');
+
+		if ($resenia-> save())
+		{
+			Session::flash('message','Reseña guardada correctamente');
+		} else {
+			Session::flash('message','Hubo un problema al intentar guardar la resenia intentelo de nuevo si el problema persiste pongase en contacto con su administrador');
+		}
+
+		return redirect ('resenias');
+
+	}
+
+	public function eliminar_resenia ($id, Request $request)
+	{
+		$resenia = Resenia::find($id);
+
+		if ($resenia->delete())
+		{
+			Session::flash('message','La Reseña con nombre "'.$resenia->tit_res.'" fue eliminada correctamente');
+		}else{
+			Session::flash('message','La Reseña con nombre "'.$resenia->tit_res.'" no pudo ser eliminada, intentelo nuevamente si el problema persiste pongase en contacto con su administrador');
+		}
+
+		return redirect('resenias');
+
+	}
+
 	
 
 }

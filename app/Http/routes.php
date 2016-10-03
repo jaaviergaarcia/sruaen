@@ -34,7 +34,7 @@ Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
 | RUTAS PARA EL INICIO DE SESION
 |--------------------------------------------------------------------------
 */
-Route::get('/', 'LoginController@mostrarinicio_sesion');
+Route::get('login', 'LoginController@mostrarinicio_sesion');
 Route::post('entrar','LoginController@entrar');
 Route::get('logout','LoginController@logout');
 
@@ -85,11 +85,12 @@ Route::post('guardar_informe','InformeController@guardar_informe');
 Route::get('informes','InformeController@informes');             //vista de los informes almacenados
 Route::get('editar_informe/{id}','InformeController@editar_informe');
 Route::post('actualizar_informe/{id}','InformeController@actualizar_informe');
+Route::get('eliminar_informe/{id}','InformeController@eliminar_informe');
 
 /*
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------
 | RUTAS PARA EL MODELO LIBRO
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------
 */
 
 Route::get('nuevo_libro','LibroController@nuevo_libro');
@@ -117,7 +118,9 @@ Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 Route::get('nueva_resenia','ReseniaController@nueva_resenia');
 Route::post('guardar_resenia','ReseniaController@guardar_resenia');
 Route::get('resenias','ReseniaController@resenias');
-Route::get('editar_resenia','ReseniaController@editar_resenia');
+Route::get('editar_resenia/{id}','ReseniaController@editar_resenia');
+Route::post('actualizar_resenia/{id}','ReseniaController@actualizar_resenia');
+Route::get('eliminar_resenia/{id}','ReseniaController@eliminar_resenia');
 
 
 /*****************************************/

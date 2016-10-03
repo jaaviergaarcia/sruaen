@@ -46,8 +46,8 @@
                             <td>{{$resenia-> pos_autor}}</td>
                             <td>{{$resenia-> lista_autor}}</td>
                             <td>
-                               <a  href="editar_articulos/{{$resenia->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                               <a  href="eliminar_articulo/{{$resenia->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_resenia/{{$resenia->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
+                               <a  href="eliminar_resenia/{{$resenia->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>

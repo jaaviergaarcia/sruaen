@@ -72,5 +72,19 @@ class InformeController extends Controller {
 
 	}
 
+	public function eliminar_informe($id, Request $request)
+	{
+		$informe = Informe::find($id);
+
+		if($informe->delete())
+		{
+			Session::flash('mesagge','El informe "'.$informe->titulo_info.'" fue eliminado correctamente');
+		} else{
+			Session::flash('message','El informe "'.$informe->titulo_info.'" no fue posible eliminarlo, intentelo nuevamente, si el problema persiste contacte al equipo de soporte');
+		}
+
+		return redirect('informes');
+	}
+
 
 }
