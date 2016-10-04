@@ -11,7 +11,7 @@
         @if(Session::has('message'))
           <div  class="alert alert-success alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                 {{ Session::get('message')}} 
+                 {{ Session::get('message')}}
           </div>
         @endif
             <table id="example0" class="table display"> 
@@ -38,7 +38,7 @@
                             <td>{{$premio-> pais}}</td>
                             <td>{{$premio-> descripcion}}</td>
                             <td>
-                               <a  href="editar_informe/{{$premio->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
+                               <a  href="editar_informe/{{$premio->id}}" type="button" class="btn btn-primary">Editar</a> <br>
                                <a  href="eliminar_informe/{{$premio->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
