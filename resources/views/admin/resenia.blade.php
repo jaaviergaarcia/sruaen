@@ -69,7 +69,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Autor Principal:</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" data-style="btn-primary">
+                    <select class="selectpicker" data-style="btn-primary" name="autor_princ">
                         <option selected disabled value="000">Seleccione una opcion</option>
                         <option value="Si">Si</option>
                         <option value="No">No</option>
@@ -80,7 +80,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Varios Autores:</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" data-style="btn-primary">
+                    <select class="selectpicker" data-style="btn-primary" name="varios_aut" required="requeried">
                         <option selected disabled value="000">Seleccione una opcion</option>
                         <option value="Si">Si</option>
                         <option value="No">No</option>

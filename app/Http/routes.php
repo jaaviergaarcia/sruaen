@@ -59,8 +59,6 @@ Route::get('eliminar_usuario/{id}','ProfesorController@eliminar_usuario');
 | RUTAS MODELO ARTICULO
 |--------------------------------------------------------------------------
 */
-
-//Route::get('articulo','AdminController@articulo');
 Route::get('nuevo_articulo','ArticuloController@nuevo_articulo');
 Route::post('guardar_articulo','ArticuloController@guardar_articulo');
 Route::get('articulos','ArticuloController@articulos');  //vista de los almacenados
@@ -73,6 +71,7 @@ Route::get('eliminar_articulo/{id}','ArticuloController@eliminar_articulo');
 Route::get('nueva_distincion','DistincionController@nueva_distincion');
 Route::post('guardar_distincion','DistincionController@guardar_distincion');
 Route::get('distinciones','DistincionController@distinciones');				//vista de los almacenados
+Route::get('editar_distincion/{id}','DistincionController@editar_distincion');
 
 
 /*

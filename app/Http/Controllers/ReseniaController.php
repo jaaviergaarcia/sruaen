@@ -2,7 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Session;
+use Redirect;
 use Illuminate\Http\Request;
 
 use App\Resenia;

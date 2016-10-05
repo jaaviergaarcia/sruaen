@@ -27,19 +27,19 @@
                         <th>Operación</th>
                     </tr>
                 </thead>
-                @foreach ($premios as $premio)
+                @foreach ($distincions as $distincion)
                     <tbody>
                         <tr>
-                            <td>{{$premio-> id}}</td>
-                            <td>{{$premio-> fecha}}</td>
-                            <td>{{$premio-> nombre_prof}}</td>
-                            <td>{{$premio-> distincion}}</td>
-                            <td>{{$premio-> institucion}}</td> 
-                            <td>{{$premio-> pais}}</td>
-                            <td>{{$premio-> descripcion}}</td>
+                            <td>{{$distincion-> id}}</td>
+                            <td>{{$distincion-> fecha}}</td>
+                            <td>{{$distincion-> nombre_prof}}</td>
+                            <td>{{$distincion-> distincion}}</td>
+                            <td>{{$distincion-> institucion}}</td> 
+                            <td>{{$distincion-> pais}}</td>
+                            <td>{{$distincion-> descripcion}}</td>
                             <td>
-                               <a  href="editar_distincion/{{$premio->id}}" type="button" class="btn btn-primary">Editar</a> <br><br>
-                               <a  href="eliminar_distincion/{{$premio->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_distincion/{{$distincion->id}}" type="button" class="btn btn-primary">Editar</a> <br><br>
+                               <a  href="eliminar_distincion/{{$distincion->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>

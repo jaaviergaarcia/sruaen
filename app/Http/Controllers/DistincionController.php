@@ -37,12 +37,36 @@ class DistincionController extends Controller {
 
 	public function distinciones()
 	{
-		$premios = Distincion::All();
-		return view('consultas_distincions.ver_distincions',compact('premios'));
+		$distincions = Distincion::All();
+		return view('consultas_distincions.ver_distincions',compact('distincions'));
 	}
 
-	public function editar_distincion()
+	public function editar_distincion($id)
 	{
+		$distincion = Distincion::find($id);
+		return view('consultas_distincions.editar_distincions', compact('distincion'));
+
+	}
+
+	public function actualizar_distincion($id, Request $request)
+	{
+		$distincion = Distincion::find($id);
+
+		$distincion->fecha = $request->input('fecha');
+		$distincion->nombre_prof = $request->input('nombre_prof');
+		$distincion->distincion = $request->input('distincion');
+		$distincion->institucion = $request->input('institucion');
+		$distincion->pais = $request->input('pais');
+		$distincion->descripcion = $request->input('descripcion');
+
+		 if($distincion->save())
+		 {
+		 	Session::flash('message','La distición fue almacenada correctamente');
+		 } else {
+		 	Session::flash('message','Se produjo un error al tratar de almanenar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
+		 }
+
+		return redirect('distinciones');
 
 	}
 
