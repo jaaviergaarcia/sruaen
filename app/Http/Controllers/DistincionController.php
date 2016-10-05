@@ -32,7 +32,7 @@ class DistincionController extends Controller {
 		 	Session::flash('message','Se produjo un error al tratar de almanenar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
 		 }
 
-		return redirect('distinciones');
+		return redirect('distinciones'); 
 	}
 
 	public function distinciones()

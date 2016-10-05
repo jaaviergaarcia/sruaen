@@ -31,7 +31,7 @@ class LibroController extends Controller {
 
 		if ($libro->save()) 
 		{
-
+ 
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" fue dado de alta correctamente.');
 		} else {
 
