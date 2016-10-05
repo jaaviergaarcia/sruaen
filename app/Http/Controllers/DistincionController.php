@@ -38,7 +38,18 @@ class DistincionController extends Controller {
 	public function distinciones()
 	{
 		$premios = Distincion::All();
-		return view('consultas_resenias.ver_resenias',compact('premios'));
+		return view('consultas_distincions.ver_distincions',compact('premios'));
 	}
+
+	public function editar_distincion()
+	{
+
+	}
+
+	public function eliminar_distincion()
+	{
+		
+	}
+
 
 }

@@ -38,8 +38,8 @@
                             <td>{{$premio-> pais}}</td>
                             <td>{{$premio-> descripcion}}</td>
                             <td>
-                               <a  href="editar_informe/{{$premio->id}}" type="button" class="btn btn-primary">Editar</a> <br>
-                               <a  href="eliminar_informe/{{$premio->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_distincion/{{$premio->id}}" type="button" class="btn btn-primary">Editar</a> <br><br>
+                               <a  href="eliminar_distincion/{{$premio->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>

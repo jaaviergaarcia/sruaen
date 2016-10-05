@@ -39,7 +39,7 @@ class LibroController extends Controller {
 			
 		}
 		
-		return redirect('nuevo_libro');
+		return redirect('libros');
 	}
 
 	public function libros(){
@@ -58,7 +58,17 @@ class LibroController extends Controller {
 
 	}
 
-	public function eliminar_libro(){
+	public function eliminar_libro($id, Request $request){
+
+		$libro = Libro::find($id);
+
+		if($libro->delete()){
+			Session::flash('message','El libro "'.$libro->titulo_libro.'" fue eliminado correctamente.');
+		} else {
+			Session::flash('message','El libro "'.$libro->titulo_libro.'" no fue posible eliminarlo correctamente, vuelva a intentarlo si el problema persiste pongase en contacto con su administrador.');
+		}
+
+		return redirect('libros');
 
 	}
 

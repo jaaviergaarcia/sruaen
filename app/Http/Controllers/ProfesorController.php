@@ -39,6 +39,7 @@ class ProfesorController extends Controller {
 			
 		} else{
 			Session::flash('message','Hubo un error al intentar guardar el usuario"'.$profesor->nombre_prof.'" vuleva a intentarlo');
+			Session::flash('class','alert-danger');
 		
 		}
 
