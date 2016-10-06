@@ -58,6 +58,35 @@ class LibroController extends Controller {
 
 	}
 
+	public function actualizar_libro($id, Request $request)
+	{
+		$libro = Libro::find($id);
+
+		$libro->fecha_pub=$request->input('fecha_pub');
+		$libro->tipo_libro=$request->input('tipo_libro');
+		$libro->autor=$request->input('autor');
+		$libro->titulo_libro=$request->input('titulo_libro');
+		$libro->editorial=$request->input('editorial');
+		$libro->total_autores=$request->input('total_autores');
+		$libro->pos_autor=$request->input('pos_autor');
+		$libro->lista=$request->input('lista');
+		$libro->isbn=$request->input('isbn');
+
+		if ($libro->save()) 
+		{
+ 
+			Session::flash('message','El Libro "'.$libro->titulo_libro.'" fue dado de alta correctamente.');
+		} else {
+
+			Session::flash('message','El Libro "'.$libro->titulo_libro.'" no fue guardado correctamente, verifque los datos nuevamente.');
+			
+		}
+		
+		return redirect('libros');
+
+
+	}
+
 	public function eliminar_libro($id, Request $request){
 
 		$libro = Libro::find($id);

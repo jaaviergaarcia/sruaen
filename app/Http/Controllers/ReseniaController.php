@@ -50,6 +50,7 @@ class ReseniaController extends Controller {
 	public function editar_resenias($id)
 	{
 		$resenia = Resenia::find($id);
+		
 		return view ('consultas_resenias.editar_resenias',compact('resenia'));
 
 	}
@@ -79,6 +80,7 @@ class ReseniaController extends Controller {
 		return redirect ('resenias');
 
 	}
+
 
 	public function eliminar_resenia ($id, Request $request)
 	{

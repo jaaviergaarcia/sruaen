@@ -8,7 +8,7 @@
       <div class="panel panel-default">
 
         <div class="panel-title">
-        Captura de datos de los Premios y/o Distinciones por Profesor
+        Actualizaci&oacuten de datos de los Premios y/o Distinciones por Profesor
           <ul class="panel-tools">
             <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
             <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
@@ -16,7 +16,8 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal" method="post" action="guardar_distincion" enctype="multipart/form-data">
+              <form class="form-horizontal" role="form-horizontal" method="post"  enctype="multipart/form-data" 
+              action="{{URL::to('actualizar_distincion/').'/'.$distincion->id}}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">
@@ -24,7 +25,7 @@
                   <div class="col-sm-8">
                     <select class="selectpicker" data-style="btn-primary" name="fecha" required="">
                         <option selected disabled value="000">Seleccione una opcion</option>
-                      @if($distincion->fecha == 2011)
+                      @if($distincion -> fecha == 2011)
                         <option value="2011" class="selectpicker" selected="selected" >2011</option>
                         <option value="2012">2012</option>
                         <option value="2013">2013</option>
@@ -32,7 +33,7 @@
                         <option value="2015">2015</option>
                         <option value="2016">2016</option>
                       @endif
-                      @if($distincion->fecha == 2012)
+                      @if($distincion -> fecha == 2012)
                         <option value="2011">2011</option>
                         <option value="2012" class="selectpicker" selected="selected" >2012</option>
                         <option value="2013">2013</option>
@@ -40,7 +41,7 @@
                         <option value="2015">2015</option>
                         <option value="2016">2016</option>
                       @endif
-                      @if($distincion->fecha == 2013)
+                      @if($distincion -> fecha == 2013)
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
                         <option value="2013" class="selectpicker" selected="selected" >2013</option>
@@ -48,7 +49,7 @@
                         <option value="2015">2015</option>
                         <option value="2016">2016</option>
                       @endif
-                      @if($distincion->fecha == 2014)
+                      @if($distincion -> fecha == 2014)
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
                         <option value="2013">2013</option>
@@ -56,7 +57,7 @@
                         <option value="2015">2015</option>
                         <option value="2016">2016</option>
                       @endif
-                      @if($distincion->fecha == 2015)
+                      @if($distincion -> fecha == 2015)
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
                         <option value="2013">2013</option>
@@ -64,7 +65,7 @@
                         <option value="2015" class="selectpicker" selected="selected" >2015</option>
                         <option value="2016">2016</option>
                       @endif
-                      @if($distincion->fecha == 2016)
+                      @if($distincion -> fecha == 2016)
                         <option value="2011">2011</option>
                         <option value="2012">2012</option>
                         <option value="2013">2013</option>
@@ -108,7 +109,8 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Descripcion de la Distincion</label>
                   <div class="col-sm-8">
-                      <textarea class="form-control" rows="3" id="textarea1" placeholder="Descripcion de la Distinción" name="descripcion" required="">    </textarea>
+                      <textarea class="form-control" rows="3" id="textarea1" placeholder="Descripcion de la Distinción" name="descripcion" required="">    
+                      </textarea>
                   </div>
                 </div>
 

@@ -20,8 +20,6 @@ use App\Resenia;
 |
 */
 
-
-
 //rutas para los middleware
 /*
 Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
@@ -72,6 +70,8 @@ Route::get('nueva_distincion','DistincionController@nueva_distincion');
 Route::post('guardar_distincion','DistincionController@guardar_distincion');
 Route::get('distinciones','DistincionController@distinciones');				//vista de los almacenados
 Route::get('editar_distincion/{id}','DistincionController@editar_distincion');
+Route::post('actualizar_distincion/{id}','DistincionController@actualizar_distincion');
+Route::get('eliminar_distincion/{id}','DistincionController@eliminar_distincion');
 
 
 /*
@@ -91,14 +91,12 @@ Route::get('eliminar_informe/{id}','InformeController@eliminar_informe');
 | RUTAS PARA EL MODELO LIBRO
 |-------------------------------------------------------------------------
 */
-
 Route::get('nuevo_libro','LibroController@nuevo_libro');
 Route::post('guardar_libro','LibroController@guardar_libro');
 Route::get('libros','LibroController@libros');    //vista de los almacenados
 Route::get('editar_libro/{id}','LibroController@editar_libro');
 Route::post('actualizar_libro/{id}','LibroController@actualizar_libro');
 Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
-
 
 /*
 |--------------------------------------------------------------------------
@@ -108,7 +106,6 @@ Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
 Route::get('nuevo_desarrollo','DesarrolloController@nuevo_desarrollo');
 Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 
-
 /*
 |--------------------------------------------------------------------------
 | RUTAS PARA EL MODELO RESEÑIAS
@@ -117,7 +114,7 @@ Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 Route::get('nueva_resenia','ReseniaController@nueva_resenia');
 Route::post('guardar_resenia','ReseniaController@guardar_resenia');
 Route::get('resenias','ReseniaController@resenias');
-Route::get('editar_resenia/{id}','ReseniaController@editar_resenia');
+Route::get('editar_resenias/{id}','ReseniaController@editar_resenias');
 Route::post('actualizar_resenia/{id}','ReseniaController@actualizar_resenia');
 Route::get('eliminar_resenia/{id}','ReseniaController@eliminar_resenia');
 

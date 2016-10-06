@@ -61,7 +61,7 @@ class DistincionController extends Controller {
 
 		 if($distincion->save())
 		 {
-		 	Session::flash('message','La distición fue almacenada correctamente');
+		 	Session::flash('message','La distición fue actulizada correctamente');
 		 } else {
 		 	Session::flash('message','Se produjo un error al tratar de almanenar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
 		 }
@@ -70,8 +70,19 @@ class DistincionController extends Controller {
 
 	}
 
-	public function eliminar_distincion()
+	public function eliminar_distincion($id, Request $request)
 	{
+
+		$distincion = Distincion::find($id);
+
+		if($distincion->delete())
+		{
+			Session::flash('message','La distición fue eliminada correctamente');
+		 } else {
+		 	Session::flash('message','Se produjo un error al tratar de eliminar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
+		}
+
+		return redirect('distinciones');
 		
 	}
 
