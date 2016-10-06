@@ -16,7 +16,7 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal" method="post" action="guardar_resenia" enctype="multipart/form-data">
+              <form class="form-horizontal" method="post" role="form-horizontal" enctype="multipart/form-data" action="{{URL::to('actualizar_resenia/').'/'.$resenia->id}}" >
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               
                 <div class="form-group">

@@ -16,6 +16,12 @@
         </div>
 
             <div class="panel-body">
+                  @if(Session::has('message'))
+                    <div  class="alert alert-{{Session::get('class')}} alert-dismissible " role="alert" >
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                           {{ Session::get('message')}} 
+                    </div>
+                  @endif
               <form class="form-horizontal" method="post" action="guardar_profesor" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -46,6 +52,13 @@
                     <input type="password" class="form-control form-control-line" placeholder="Introduzca su contraseña" name="pass" required="">
                   </div>
                 </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label form-label">Confirmar Contraseña:</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control form-control-line" placeholder="Confirme su contraseña por favor" name="passConfirmar" required="">
+                  </div>
+                </div>
+                
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Tipo de Usuario:</label>
                   <div class="col-sm-8">

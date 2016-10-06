@@ -28,8 +28,10 @@ class InformeController extends Controller {
 		if ($informe->save())
 		{
 			Session::flash('message','El informe ha sido guardado correctamente');
+			Session::flash('class','success');
 		} else {
 			Session::flash('message','Hubo un error al intentar guardar el informe, intentelo nuevamente, si el problema continua contacte al equipo de soporte.');
+			Session::flash('class','danger');
 		}
 
 		return redirect('informes');  // esta ruta corresponde a la function del mismo nombre pues en su return el valor es la vista cargada del sistema
@@ -63,28 +65,27 @@ class InformeController extends Controller {
 
 		if ($informe->save())
 		{
-			Session::flash('message','El informe ha sido actualizado correctamente');
+			Session::flash('mesagge','El informe "'.$informe->titulo_info.'" ha sido actualizado correctamente');
+			Session::flash('class','success');
 		} else {
 			Session::flash('message','Hubo un error al intentar actualizar el informe, intentelo nuevamente, si el problema continua contacte al equipo de soporte.');
+			Session::flash('class','danger');
 		}
-
 		return redirect('informes');
-
 	}
 
 	public function eliminar_informe($id, Request $request)
 	{
 		$informe = Informe::find($id);
-
 		if($informe->delete())
 		{
 			Session::flash('mesagge','El informe "'.$informe->titulo_info.'" fue eliminado correctamente');
+			Session::flash('class','success');
 		} else{
 			Session::flash('message','El informe "'.$informe->titulo_info.'" no fue posible eliminarlo, intentelo nuevamente, si el problema persiste contacte al equipo de soporte');
+			Session::flash('class','danger');
 		}
 
 		return redirect('informes');
 	}
-
-
 }

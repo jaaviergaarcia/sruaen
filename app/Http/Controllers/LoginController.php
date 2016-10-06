@@ -64,6 +64,7 @@ class LoginController extends Controller {
 		//Sesion::flash sirve para enviar/mostrar mensajes 
 
 	Session::flash('message','Correo o contraseña incorrecto, verique que sus datos sean correctos.');
+	Session::flash('class','danger');
 	return redirect('/');
 
 

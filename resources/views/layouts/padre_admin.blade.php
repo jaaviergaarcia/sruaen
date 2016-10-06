@@ -134,7 +134,6 @@
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
 <div class="container-default">
-
 @yield('content')
 <br><br><br><br><br>
 <br><br><br><br><br>

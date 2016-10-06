@@ -28,8 +28,10 @@ class DistincionController extends Controller {
 		 if($distincion->save())
 		 {
 		 	Session::flash('message','La distición fue almacenada correctamente');
+		 	Session::flash('class','success');
 		 } else {
 		 	Session::flash('message','Se produjo un error al tratar de almanenar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
+		 	Session::flash('class','danger');
 		 }
 
 		return redirect('distinciones'); 
@@ -62,8 +64,10 @@ class DistincionController extends Controller {
 		 if($distincion->save())
 		 {
 		 	Session::flash('message','La distición fue actulizada correctamente');
+		 	Session::flash('class','success');
 		 } else {
 		 	Session::flash('message','Se produjo un error al tratar de almanenar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
+		 	Session::flash('class','danger');
 		 }
 
 		return redirect('distinciones');
@@ -78,8 +82,10 @@ class DistincionController extends Controller {
 		if($distincion->delete())
 		{
 			Session::flash('message','La distición fue eliminada correctamente');
+			Session::flash('class','success');
 		 } else {
 		 	Session::flash('message','Se produjo un error al tratar de eliminar el premio vuelva a intentarlo nuevamente, o pongase en contacto con su equipo de soporte');
+		 	Session::flash('class','danger');
 		}
 
 		return redirect('distinciones');

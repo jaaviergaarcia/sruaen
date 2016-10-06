@@ -33,15 +33,30 @@ class ProfesorController extends Controller {
 		$profesor->cuerpo_acad = $request->input('cuerpo_acad');
 		$profesor->lgac = $request->input('lgac');
 
-		if ($profesor->save())
+
+		$pass = $request->input('pass');
+		$passConfirmar = $request->input('passConfirmar');
+
+
+		if($pass == $passConfirmar)
 		{
-			Session::flash('message','Usuario"'.$profesor->nombre_prof.'" ha sido guardado Correctamente');
-			
-		} else{
-			Session::flash('message','Hubo un error al intentar guardar el usuario"'.$profesor->nombre_prof.'" vuleva a intentarlo');
-			Session::flash('class','alert-danger');
-		
+			if ($profesor->save())
+			{
+				Session::flash('message','Usuario"'.$profesor->nombre_prof.'" ha sido guardado Correctamente');
+				Session::flash('class','success');				
+			} else{
+				Session::flash('message','Hubo un error al intentar guardar el usuario"'.$profesor->nombre_prof.'" vuleva a intentarlo');
+				Session::flash('class','danger');			
+			}
+
+		} else {
+
+			Session::flash('message','Sus contraseñas no son iguales, verifique que sean iguales e intentelo nuevamente si el error persiste contacte a su administrador');
+			Session::flash('class','danger');
+
+			return redirect('nuevo_profesor');
 		}
+		
 
 		return redirect ('ver_usuarios');
     }
@@ -88,10 +103,11 @@ class ProfesorController extends Controller {
 		{
 			//mostrar mensajes
 			Session::flash('message','Usuario "'.$profesor->nombre_prof.'" actilizado Correctamente');
-			
+			Session::flash('class','success');
 		} else{
 
 			Session::flash('message','Hubo un error al intentar actualizar el usuario"'.$profesor->nombre_prof.'" vuleva a intentarlo');
+			Session::flash('class','danger');
 		
 		}
 
@@ -105,8 +121,10 @@ class ProfesorController extends Controller {
 		{
 			//mostrar mensajes
 			Session::flash('message','El usuario/profesor"'.$profesor->nombre_prof.'" ha sido elimnado.');
+			Session::flash('class','success');
 		} else{
 			Session::flash('message','El usuario/profesor"'.$profesor->nombre_prof.'" no ha sido posible eliminarlo.');
+			Session::flash('class','danger');
 		}
 
 		return redirect ('ver_usuarios');

@@ -9,9 +9,7 @@ use Illuminate\Http\Request;
 use App\Articulo;
 
 class ArticuloController extends Controller {
-
-
-
+	
     public function nuevo_articulo(){
 
 	    return view ('admin.articulo');
@@ -34,10 +32,11 @@ class ArticuloController extends Controller {
 		if ($articulo->save())  
 		{
 			Session::flash('message','El articulo ha sido guardado Correctamente');
+			Session::flash('class','success');
 			
 		} else {
 			Session::flash('message','Hubo un error al intentar guardar el articulo vuleva a intentarlo');
-		
+			Session::flash('class','danger');
 		}
 
 
@@ -76,9 +75,11 @@ class ArticuloController extends Controller {
 		if ($articulo->save())
 		{
 			Session::flash('message','El articulo "'.$articulo->titulo_art.'" ha sido guardado Correctamente');
+			Session::flash('class','success');
 			
 		} else {
 			Session::flash('message','Hubo un error al intentar guardar el articulo "'.$articulo->titulo_art.'" vuleva a intentarlo');
+			Session::flash('class','danger');
 		
 		}
 
@@ -95,8 +96,10 @@ class ArticuloController extends Controller {
 		{
 			//mostrar mensajes
 			Session::flash('message','El Articulo dado de alta con el nombre de "'.$articulo->titulo_art.'" ha sido elimnado.');
+			Session::flash('class','success');
 		} else{
 			Session::flash('message','El  Articulo dado de alta con el nombre de "'.$articulo->titulo_art.'" no ha sido posible eliminarlo.');
+			Session::flash('class','danger');
 		}
 
 		return redirect ('articulos');

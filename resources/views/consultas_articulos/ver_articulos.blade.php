@@ -8,12 +8,12 @@
           Listado de Articulos en SUAEN 
         </div>
         <div class="panel-body table-responsive">
-        @if(Session::has('message'))
-          <div  class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                 {{ Session::get('message')}} 
-          </div>
-        @endif
+                    @if(Session::has('message'))
+                        <div  class="alert alert-{{Session::get('class')}} alert-dismissible " role="alert" >
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                           {{ Session::get('message')}} 
+                        </div>
+                    @endif
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
                     <tr>

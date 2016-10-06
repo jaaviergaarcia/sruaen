@@ -33,8 +33,10 @@ class ReseniaController extends Controller {
 		if ($resenia-> save())
 		{
 			Session::flash('message','Reseña guardada correctamente');
+			Session::flash('class','success');
 		} else {
 			Session::flash('message','Hubo un problema al intentar guardar la resenia intentelo de nuevo si el problema persiste pongase en contacto con su administrador');
+			Session::flash('class','danger');
 		}
 
 		return redirect ('resenias');
@@ -72,15 +74,14 @@ class ReseniaController extends Controller {
 
 		if ($resenia-> save())
 		{
-			Session::flash('message','Reseña guardada correctamente');
+			Session::flash('message','La reseña ha sido actualizada correctamente');
+			Session::flash('class','success');
 		} else {
 			Session::flash('message','Hubo un problema al intentar guardar la resenia intentelo de nuevo si el problema persiste pongase en contacto con su administrador');
+			Session::flash('class','danger');
 		}
-
 		return redirect ('resenias');
-
 	}
-
 
 	public function eliminar_resenia ($id, Request $request)
 	{
@@ -89,8 +90,10 @@ class ReseniaController extends Controller {
 		if ($resenia->delete())
 		{
 			Session::flash('message','La Reseña con nombre "'.$resenia->tit_res.'" fue eliminada correctamente');
+			Session::flash('class','success');
 		}else{
 			Session::flash('message','La Reseña con nombre "'.$resenia->tit_res.'" no pudo ser eliminada, intentelo nuevamente si el problema persiste pongase en contacto con su administrador');
+			Session::flash('class','danger');
 		}
 
 		return redirect('resenias');
