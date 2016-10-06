@@ -33,9 +33,12 @@ class LibroController extends Controller {
 		{
  
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" fue dado de alta correctamente.');
+			Session::flash('class','success');
+
 		} else {
 
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" no fue guardado correctamente, verifque los datos nuevamente.');
+			Session::flash('class','danger');
 			
 		}
 		
@@ -76,9 +79,11 @@ class LibroController extends Controller {
 		{
  
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" fue dado de alta correctamente.');
+			Session::flash('class','success');
 		} else {
 
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" no fue guardado correctamente, verifque los datos nuevamente.');
+			Session::flash('class','danger');
 			
 		}
 		
@@ -93,8 +98,10 @@ class LibroController extends Controller {
 
 		if($libro->delete()){
 			Session::flash('message','El libro "'.$libro->titulo_libro.'" fue eliminado correctamente.');
+			Session::flash('class','success');
 		} else {
 			Session::flash('message','El libro "'.$libro->titulo_libro.'" no fue posible eliminarlo correctamente, vuelva a intentarlo si el problema persiste pongase en contacto con su administrador.');
+			Session::flash('class','danger');
 		}
 
 		return redirect('libros');
