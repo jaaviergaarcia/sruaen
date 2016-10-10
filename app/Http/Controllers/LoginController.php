@@ -17,6 +17,8 @@ class LoginController extends Controller {
 		return view('inicio-sesion');
 	}
 
+	
+
 	public function entrar(Request $request)
 	{
         //variable           //campo_basedatos                                            
