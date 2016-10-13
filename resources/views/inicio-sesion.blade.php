@@ -16,18 +16,17 @@
 
     <div class="login-form">
       <form action="entrar" method="post" enctype="multipart/form-data" action="entrar">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
           @if(Session::has('message'))
               <div  class="alert alert-{{Session::get('class')}}"> 
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                      {{ Session::get('message')}} 
               </div>
           @endif
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
             <div class="top">
               <img src="img/logo-uaen-small.jpg" alt="icon" class="icon">
               
-              <em><h2>Bienvenido</h2></em>
+              <h2>Bienvenido</h2>
             </div>
             <div class="form-area">
                 <div class="group">
@@ -36,7 +35,7 @@
                 </div>
 
                 <div class="group">
-                  <input type="password" class="form-control" placeholder="Password" required="">
+                  <input type="password" class="form-control" placeholder="Password" required="" value="">
                   <i class="fa fa-key"></i>
                 </div>
 
