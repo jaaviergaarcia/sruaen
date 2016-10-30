@@ -17,7 +17,6 @@ class LoginController extends Controller {
 		return view('inicio-sesion');
 	}
 
-	
 
 	public function entrar(Request $request)
 	{
@@ -30,9 +29,11 @@ class LoginController extends Controller {
 
         //@foreach    @endforeach y se eliminan los {}
 		foreach ($profesors as $profesor) 
-		{
+		{	
 
-			if(($profesor->email==$email) && ($profesor->pass==$pass)) 
+			//@if    @endif y se eliminan los {}
+
+			if(($profesor->email==$email) and ($profesor->pass==$pass)) 
 			{
 
 				Session::put('id',$profesor->id);
@@ -48,24 +49,15 @@ class LoginController extends Controller {
 					case 'C':
 						return redirect('admin');
 						break;
-				}
+				}//end switch
 
-
-				//@if    @endif y se eliminan los {}
-				 /*if ($profesor->tipo =='A') 
-				{
-					//Si entra a esta vista el usuario que entro es un administrador
-					return redirect('ver_usuarios');
-
-				}//segundo if */
-
-			}//primer if
+			}//end if
 			
 		}//end foreach
 
 		//Sesion::flash sirve para enviar/mostrar mensajes 
 
-	Session::flash('message','Correo o contraseña incorrecto, verique que sus datos sean correctos.');
+	Session::flash('message','Correo o contraseña incorrectos, verique sus datos.');
 	Session::flash('class','danger');
 	return redirect('/');
 
