@@ -21,9 +21,11 @@ class CheckUser {
 	{
 		$tipo = Session::get('tipo');
 
-		if($tipo != "A"){
+		if($tipo != "A") OR ($tipo != "C") {
+
 			Session::flush();
 			return redirect('iniciar_sesion');
+
 		}
 		return $next($request);
 	}

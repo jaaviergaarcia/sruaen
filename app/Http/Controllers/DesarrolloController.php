@@ -15,6 +15,9 @@ class DesarrolloController extends Controller {
 
 	public function guardar_desarrollo(Request $request){
 
+		//$id = Session::get('id');
+		//return $id;
+		
 		$desarrollo = new Desarrollo;
 
 		$desarrollo->fecha_pub = $request->input('fecha_pub');

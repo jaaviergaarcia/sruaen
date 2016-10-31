@@ -38,7 +38,6 @@
                   <input type="password" name="pass" class="form-control" placeholder="Password" required="" value="">
                   <i class="fa fa-key"></i>
                 </div>
-
                 <!--
 
                 <div class="group">

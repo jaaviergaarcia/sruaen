@@ -80,7 +80,7 @@
   </li>
   <li><a href="#"><span class="icon color10"><i class="fa fa-file-text-o"></i></span>Desarrollo<span class="caret"></span></a>
   <ul>
-      <li><a href="desarrollo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="nuevo_desarrollo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color11"><i class="fa fa-file-o"></i></span>Reseñas<span class="caret"></span></a>
