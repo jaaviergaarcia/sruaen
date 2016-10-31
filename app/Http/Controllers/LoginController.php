@@ -50,9 +50,7 @@ class LoginController extends Controller {
 						return redirect('admin');
 						break;
 				}//end switch
-
-			}//end if
-			
+			}//end if			
 		}//end foreach
 
 		//Sesion::flash sirve para enviar/mostrar mensajes 

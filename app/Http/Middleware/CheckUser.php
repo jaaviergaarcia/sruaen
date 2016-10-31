@@ -23,7 +23,7 @@ class CheckUser {
 
 		if($tipo != "A"){
 			Session::flush();
-			return redirect('logout');
+			return redirect('iniciar_sesion');
 		}
 		return $next($request);
 	}

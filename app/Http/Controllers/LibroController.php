@@ -28,6 +28,7 @@ class LibroController extends Controller {
 		$libro->pos_autor=$request->input('pos_autor');
 		$libro->lista=$request->input('lista');
 		$libro->isbn=$request->input('isbn');
+		
 
 		if ($libro->save()) 
 		{

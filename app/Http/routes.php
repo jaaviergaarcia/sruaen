@@ -41,13 +41,15 @@ Route::get('admin','AdminController@admin');
 | RUTAS MODELO PROFESOR-USUARIO
 |--------------------------------------------------------------------------
 */
+Route::group(['middleware' => 'admin'], function () {
 
-Route::get('nuevo_profesor','ProfesorController@nuevo_profesor');
-Route::post('guardar_profesor','ProfesorController@guardar_profesor');
-Route::get('ver_usuarios','ProfesorController@ver_usuarios');
-Route::get('editar_usuario/{id}','ProfesorController@editar_usuario');
-Route::post('actualizar_usuario/{id}','ProfesorController@actualizar_usuario');
-Route::get('eliminar_usuario/{id}','ProfesorController@eliminar_usuario');
+	Route::get('nuevo_profesor','ProfesorController@nuevo_profesor');
+	Route::post('guardar_profesor','ProfesorController@guardar_profesor');
+    Route::get('ver_usuarios','ProfesorController@ver_usuarios');
+    Route::get('editar_usuario/{id}','ProfesorController@editar_usuario');
+    Route::post('actualizar_usuario/{id}','ProfesorController@actualizar_usuario');
+    Route::get('eliminar_usuario/{id}','ProfesorController@eliminar_usuario');
+});
 	/*
 	|--------------------------------------------------------------------------
 	| RUTAS MODELO ARTICULO

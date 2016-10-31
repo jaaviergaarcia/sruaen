@@ -15,7 +15,7 @@
   <body>
 
     <div class="login-form">
-      <form action="entrar" method="post" enctype="multipart/form-data" action="entrar">
+      <form action="entrar" method="post" enctype="multipart/form-data">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
           @if(Session::has('message'))
               <div  class="alert alert-{{Session::get('class')}}"> 
@@ -30,12 +30,12 @@
             </div>
             <div class="form-area">
                 <div class="group">
-                  <input type="email" class="form-control" placeholder="Email" required="" autofocus="">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required="" autofocus="">
                   <i class="fa fa-user"></i>
                 </div>
 
                 <div class="group">
-                  <input type="password" class="form-control" placeholder="Password" required="" value="">
+                  <input type="password" name="pass" class="form-control" placeholder="Password" required="" value="">
                   <i class="fa fa-key"></i>
                 </div>
 
