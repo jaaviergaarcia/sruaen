@@ -94,13 +94,7 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('editar_libro/{id}','LibroController@editar_libro');
 	Route::post('actualizar_libro/{id}','LibroController@actualizar_libro');
 	Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
-		/*
-		|--------------------------------------------------------------------------
-		| RUTAS PARA EL MODELO DESARROLLO
-		|--------------------------------------------------------------------------
-		*/
-	Route::get('nuevo_desarrollo','DesarrolloController@nuevo_desarrollo');
-	Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
+		
 		/*
 		|--------------------------------------------------------------------------
 		| RUTAS PARA EL MODELO RESEÑIAS
@@ -112,6 +106,23 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('editar_resenias/{id}','ReseniaController@editar_resenias');
 	Route::post('actualizar_resenia/{id}','ReseniaController@actualizar_resenia');
 	Route::get('eliminar_resenia/{id}','ReseniaController@eliminar_resenia');
+
+
+		/*
+		|--------------------------------------------------------------------------
+		| RUTAS PARA LAS TABLAS CON RELACION 1*M
+		|--------------------------------------------------------------------------
+		*/
+
+
+
+		/*
+		|--------------------------------------------------------------------------
+		| RUTAS PARA EL MODELO DESARROLLO
+		|--------------------------------------------------------------------------
+		*/
+	Route::get('nuevo_desarrollo','DesarrolloController@nuevo_desarrollo');
+	Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
 
 });
 

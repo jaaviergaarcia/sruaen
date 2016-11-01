@@ -2,8 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
+
+use Session;
 
 use App\Desarrollo;
 
@@ -15,11 +16,13 @@ class DesarrolloController extends Controller {
 
 	public function guardar_desarrollo(Request $request){
 
-		//$id = Session::get('id');
+		$id = Session::get('id');
 		//return $id;
+
 		
 		$desarrollo = new Desarrollo;
 
+		$desarrollo->$id = $request->input('id');
 		$desarrollo->fecha_pub = $request->input('fecha_pub');
 		$desarrollo->tipo_des = $request->input('tipo_des');
 		$desarrollo->autor = $request->input('autor');
@@ -30,7 +33,7 @@ class DesarrolloController extends Controller {
 
 		$desarrollo->save();
 
-		return redirect ('nuevo_desarrollo');
+		return redirect ('nuevo_desarrollo'); 
 		
 	}
 
