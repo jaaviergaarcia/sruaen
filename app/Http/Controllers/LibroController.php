@@ -31,8 +31,7 @@ class LibroController extends Controller {
 		
 
 		if ($libro->save()) 
-		{
- 
+		{ 
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" fue dado de alta correctamente.');
 			Session::flash('class','success');
 
@@ -49,7 +48,6 @@ class LibroController extends Controller {
 	public function libros(){
 
 		$libros =  Libro::All();
-
 		return view('consultas_libros.ver_libros',compact('libros'));		
 
 	}
@@ -57,7 +55,6 @@ class LibroController extends Controller {
 	public function editar_libro($id){
 
 		$libro = Libro::find($id);
-
 		return view('consultas_libros.editar_libros',compact('libro'));
 
 	}
@@ -77,20 +74,15 @@ class LibroController extends Controller {
 		$libro->isbn=$request->input('isbn');
 
 		if ($libro->save()) 
-		{
- 
+		{ 
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" fue dado de alta correctamente.');
 			Session::flash('class','success');
 		} else {
-
 			Session::flash('message','El Libro "'.$libro->titulo_libro.'" no fue guardado correctamente, verifque los datos nuevamente.');
 			Session::flash('class','danger');
 			
-		}
-		
+		}		
 		return redirect('libros');
-
-
 	}
 
 	public function eliminar_libro($id, Request $request){

@@ -29,7 +29,7 @@ class ReseniaController extends Controller {
 		$resenia->varios_aut = $request->input('varios_aut');
 		$resenia->pos_autor = $request->input('pos_autor');
 		$resenia->lista_autor = $request->input('lista_autor');
-
+		
 		if ($resenia-> save())
 		{
 			Session::flash('message','Reseña guardada correctamente');
@@ -38,17 +38,13 @@ class ReseniaController extends Controller {
 			Session::flash('message','Hubo un problema al intentar guardar la resenia intentelo de nuevo si el problema persiste pongase en contacto con su administrador');
 			Session::flash('class','danger');
 		}
-
 		return redirect ('resenias');
-
 	}
-
 	public function resenias()
 	{
 		$resenias = Resenia::All();
 		return view('consultas_resenias.ver_resenias',compact('resenias'));
 	}
-
 	public function editar_resenias($id)
 	{
 		$resenia = Resenia::find($id);
@@ -56,7 +52,6 @@ class ReseniaController extends Controller {
 		return view ('consultas_resenias.editar_resenias',compact('resenia'));
 
 	}
-
 	public function actualizar_resenia($id, Request $request)
 	{
 		$resenia = Resenia::find($id);
@@ -82,7 +77,6 @@ class ReseniaController extends Controller {
 		}
 		return redirect ('resenias');
 	}
-
 	public function eliminar_resenia ($id, Request $request)
 	{
 		$resenia = Resenia::find($id);
@@ -95,11 +89,6 @@ class ReseniaController extends Controller {
 			Session::flash('message','La Reseña con nombre "'.$resenia->tit_res.'" no pudo ser eliminada, intentelo nuevamente si el problema persiste pongase en contacto con su administrador');
 			Session::flash('class','danger');
 		}
-
 		return redirect('resenias');
-
-	}
-
-	
-
+	}	
 }
