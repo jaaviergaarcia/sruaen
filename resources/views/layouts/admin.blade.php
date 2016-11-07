@@ -27,7 +27,7 @@
   	<!-- End App Logo -->
 
     <!-- Start Sidebar Show Hide Button -->
-    <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+    <a href="#" class="sidebar-open-button" data-toggle="tooltip" data-placement="right" title="Haz click para ocultar/mostrar Menú lateral"><i class="fa fa-bars"></i></a>
     <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
     <!-- End Sidebar Show Hide Button -->
 
@@ -35,7 +35,7 @@
     <!-- Start Top Right -->   
     <ul class="top-right">
     <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><span class="fa fa-user"></span></a>
+      <a href="#" data-toggle="dropdown" title="Cerrar Sesión" class="dropdown-toggle profilebox"><span class="fa fa-user"></span></a>
         <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
           <li><a href="logout"><i class="fa falist fa-power-off"></i> Logout</a></li>
         </ul>
@@ -50,7 +50,7 @@
 <div class="sidebar clearfix">
 
 <ul class="sidebar-panel nav">
-  <li class="sidetitle">MENÚ</li>
+  <li class="sidetitle" data-toggle="tooltip" data-placement="right" title="Menú principal" >MENÚ</li>
   <li><a href="#"><span class="icon color5"><i class="fa fa-users fa-fw"></i></span>Usuarios<span class="caret"></span></a>
     <ul>
       <li><a href="nuevo_profesor"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
@@ -89,7 +89,7 @@
   </li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-copyright"></i></span>Patentes<span class="caret"></span></a>
   <ul>
-      <li><a href="patente"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="nueva_patente"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color12"><i class="fa fa-font"></i></span>Trabajos<span class="caret"></span></a>

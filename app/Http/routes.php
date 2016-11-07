@@ -128,6 +128,15 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::post('actualizar_desarrollo/{id}','DesarrolloController@actualizar_desarrollo');
 	Route::get('eliminar_desarrollo/{id}','DesarrolloController@eliminar_desarrollo');
 
+		/*
+		|--------------------------------------------------------------------------
+		| RUTAS PARA EL MODELO PATENTE
+		|--------------------------------------------------------------------------
+		*/
+	Route::get('nueva_patente','PatenteController@nuevo_patente');
+	Route::post('guardar_patente','PatenteController@guardar_patente');
+	Route::get('patentes','PatenteController@ver_patentes');
+
 });
 
 /*****************************************/

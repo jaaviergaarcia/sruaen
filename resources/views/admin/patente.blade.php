@@ -15,19 +15,20 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal">
+              <form class="form-horizontal" method="POST" action="guardar_patente" enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Año de Publicacion:</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" data-style="btn-primary">
-                        <option>Seleccione una opcion</option>
-                        <option>2011</option>
-                        <option>2012</option>
-                        <option>2013</option>
-                        <option>2014</option>
-                        <option>2015</option>
-                        <option>2016</option>
+                    <select class="selectpicker" data-style="btn-primary" name="fecha_pub" required="">
+                        <option selected disabled value="000">Seleccione una opcion</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
                       </select>                  
                   </div>
                 </div>
@@ -35,42 +36,43 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Trabajo presentado:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Nombre del trabajo presentado">
+                    <input type="text" class="form-control form-control-line" name="trabajos" placeholder="Nombre del trabajo presentado" required="" >
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Autor:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Nombre del autor">
+                    <input type="text" class="form-control form-control-line" name="autor_pat" placeholder="Nombre del autor" 
+                    required="">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Titulo del trabajo:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="TItulo del trabajo">
+                    <input type="text" class="form-control form-control-line" name="tit_trabajo" placeholder="TItulo del trabajo" required="">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Tipo de participación:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Tipo de participacón del autor">
+                    <input type="text" class="form-control form-control-line" name="tipo_par" placeholder="Tipo de participacón del autor" required="">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Tipo de patente:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Tipo de patente registrada">
+                    <input type="text" class="form-control form-control-line" name="tipo_pat" placeholder="Tipo de patente registrada" required="">
                   </div>
                 </div>      
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Estado de la patente:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Estado de la patente">
+                    <input type="text" class="form-control form-control-line" name="edo_pat" placeholder="Estado de la patente" required="">
                   </div>
                 </div>
 

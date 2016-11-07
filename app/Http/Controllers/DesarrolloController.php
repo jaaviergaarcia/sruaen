@@ -18,7 +18,7 @@ class DesarrolloController extends Controller {
 	public function guardar_desarrollo(Request $request){
 
 		$profesor_id = Session::get('id');
-		//return $id;
+		//return $profesor_id;
 
 		
 		$desarrollo = new Desarrollo;

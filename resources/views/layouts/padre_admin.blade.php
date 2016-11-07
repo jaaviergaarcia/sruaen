@@ -90,7 +90,7 @@
   </li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-copyright"></i></span>Patentes<span class="caret"></span></a>
   <ul>
-      <li><a href="patente"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="nueva_patente"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color12"><i class="fa fa-font"></i></span>Trabajos<span class="caret"></span></a>
