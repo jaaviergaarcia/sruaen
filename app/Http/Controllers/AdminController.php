@@ -10,7 +10,7 @@ class AdminController extends Controller {
 	public function admin(){
 		return view('admin.index');
 	}
-
+/*
 	public function articulo(){
 		return view('admin.articulo');
 	}
@@ -50,4 +50,5 @@ class AdminController extends Controller {
 	public function ver_articulo(){
 		return view('consultas.ver_articulo');
 	}
+*/
 }

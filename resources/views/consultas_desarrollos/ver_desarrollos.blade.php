@@ -19,27 +19,30 @@
                     <tr>
                         <th>No</th>
                         <th>Fecha</th>
+                        <th>Tipo</th>
                         <th>Autor</th>
-                        <th>Distincion/Premio</th>
-                        <th>Institución</th>
-                        <th>País</th>  
-                        <th>Descripción</th>    
-                        <th>Operación</th>
+                        <th>Nombre Desarrollo</th>
+                        <th>Tipo</th>  
+                        <th>Sector</th>    
+                        <th>Pa&iacutes</th>
+                        <th>Acci&oacuten</th>
+
                     </tr>
                 </thead>
-                @foreach ($premios as $premio)
+                @foreach ($desarrollos as $desarrollo)
                     <tbody>
                         <tr>
-                            <td>{{$premio-> id}}</td>
-                            <td>{{$premio-> fecha}}</td>
-                            <td>{{$premio-> nombre_prof}}</td>
-                            <td>{{$premio-> distincion}}</td>
-                            <td>{{$premio-> institucion}}</td> 
-                            <td>{{$premio-> pais}}</td>
-                            <td>{{$premio-> descripcion}}</td>
+                            <td>{{$desarrollo-> id}}</td>
+                            <td>{{$desarrollo-> fecha_pub}}</td>
+                            <td>{{$desarrollo-> tipo_des}}</td>
+                            <td>{{$desarrollo-> autor}}</td> 
+                            <td>{{$desarrollo-> nombre_des}}</td>
+                            <td>{{$desarrollo-> tipo}}</td>
+                            <td>{{$desarrollo-> sector}}</td>
+                            <td>{{$desarrollo-> pais}}</td>
                             <td>
-                               <a  href="editar_informe/{{$informe->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                               <a  href="eliminar_informe/{{$informe->id}}" class="btn btn-danger">Eliminar</a>
+                              <p> <a  href="editar_desarrollo/{{$desarrollo->id}}" type="button" class="btn btn-primary">Editar</a></p>
+                                  <a  href="eliminar_desarrollo/{{$desarrollo->id}}" class="btn btn-danger">Eliminar</a>
                             </td>          
                         </tr>
                     </tbody>
@@ -53,11 +56,12 @@
     <!-- End Panel -->
     @stop
 
-    @section('search')
+@section('search')
 
 <!-- ================================================
 Data Tables
 ================================================ -->
+
 <script src="js/datatables/datatables.min.js"></script>
     <script>
            $(document).ready(function() {

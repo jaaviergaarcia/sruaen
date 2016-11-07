@@ -47,7 +47,7 @@
                           <!--  @if(Session::get('tipo') == 'A') -->
                                <a  href="editar_articulos/{{$articulo->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
                                <a  href="eliminar_articulo/{{$articulo->id}}" class="btn btn-danger">Eliminar</a>
-                          <!--  @elseif(Session::get('tipo') == 'C') -->
+                          <!--  @elseif(Session::get('tipo') == 'C') 
                                 <a  href="editar_articulos/{{$articulo->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
                           <!--  @endif -->
                             </td>          

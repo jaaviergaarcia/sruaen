@@ -108,11 +108,11 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('eliminar_resenia/{id}','ReseniaController@eliminar_resenia');
 
 
-		/*
-		|--------------------------------------------------------------------------
-		| RUTAS PARA LAS TABLAS CON RELACION 1*M
-		|--------------------------------------------------------------------------
-		*/
+/*
+|--------------------------------------------------------------------------
+| RUTAS PARA LAS TABLAS CON RELACION 1*M
+|--------------------------------------------------------------------------
+*/
 
 
 
@@ -123,6 +123,10 @@ Route::group(['middleware' => 'admin'], function () {
 		*/
 	Route::get('nuevo_desarrollo','DesarrolloController@nuevo_desarrollo');
 	Route::post('guardar_desarrollo','DesarrolloController@guardar_desarrollo');
+	Route::get('desarrollos','DesarrolloController@ver_desarrollos');
+	Route::get('editar_desarrollo/{id}','DesarrolloController@editar_desarrollo');
+	Route::post('actualizar_desarrollo/{id}','DesarrolloController@actualizar_desarrollo');
+	Route::get('eliminar_desarrollo/{id}','DesarrolloController@eliminar_desarrollo');
 
 });
 
