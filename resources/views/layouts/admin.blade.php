@@ -22,7 +22,7 @@
 
   	<!-- Start App Logo -->
   	<div class="applogo">
-  		<a href="admin" class="logo">Sistema UAEN</a>
+  		<a href="Principal" class="logo">Sistema UAEN</a>
   	</div>
   	<!-- End App Logo -->
 
@@ -94,12 +94,12 @@
   </li>
   <li><a href="#"><span class="icon color12"><i class="fa fa-font"></i></span>Trabajos<span class="caret"></span></a>
   <ul>
-      <li><a href="trabajo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="nuevo_trabajo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color14"><i class="fa fa-male"></i></span>Tutorias<span class="caret"></span></a>
   <ul>
-      <li><a href="#"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="agregar_tutoria"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
      <!-- <li><a href="#"><i class="fa fa-eraser"></i>Eliminar</a></li> -->
   </ul>    
   </li>
@@ -122,9 +122,9 @@
         <li><a href="distinciones">Distinciones/Premios</a></li>
         <li><a href="desarrollos">Desarrollos</a></li>
         <li><a href="resenias">Reseñas</a></li>
-        <li><a href="#">Patentes</a></li>
-        <li><a href="#">Trabajos</a></li>
-        <li><a href="#">Tutorias</a></li>
+        <li><a href="patentes">Patentes</a></li>
+        <li><a href="trabajos">Trabajos</a></li>
+        <li><a href="tutorias">Tutorias</a></li>
         <li><a href="#">Productividad</a></li>
       </ol>
   </div>
