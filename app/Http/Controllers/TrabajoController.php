@@ -54,4 +54,49 @@ class TrabajoController extends Controller {
 
 	}
 
+	public function actualizar_trabajo($id, Request $request){
+
+		$trabajo = Trabajo::find($id);
+
+		//$trabajo->profesor_id = $profesor_id;
+		$trabajo->fecha_pub = $request->input('fecha_pub');
+		$trabajo->tipo_trab = $request->input('tipo_trab');
+		$trabajo->autor = $request->input('autor');
+		$trabajo->titulo_trab = $request->input('titulo_trab');
+		$trabajo->lugar_evento = $request->input('lugar_evento');
+		$trabajo->entidad_evento = $request->input('entidad_evento');
+
+		if($trabajo->save()){
+			Session::flash('message','El trabajo fue actualizado correctamente');
+			Session::flash('class','success');
+
+		}else{
+			Session::flash('message','El trabajo no fue actualizado correctamente');
+			Session::flash('class','danger');
+
+		}
+
+		return redirect('trabajos');
+
+	}
+
+	public function eliminar_trabajo($id, Request $request){
+
+		$trabajo = Trabajo::find($id);
+
+		if($trabajo->delete()){
+			Session::flash('message','El trabajo fue actualizado correctamente');
+			Session::flash('class','success');
+
+		}else{
+			Session::flash('message','El trabajo no fue actualizado correctamente');
+			Session::flash('class','danger');
+
+		}
+
+		return redirect('trabajos');
+
+
+	}
+
 }

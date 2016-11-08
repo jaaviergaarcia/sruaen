@@ -149,6 +149,8 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::post('guardar_trabajo','TrabajoController@guardar_trabajo');
 	Route::get('trabajos','TrabajoController@ver_trabajos');
 	Route::get('editar_trabajo/{id}','TrabajoController@editar_trabajo');
+	Route::post('actualizar_trabajo/{id}','TrabajoController@actualizar_trabajo');
+	Route::get('eliminar_trabajo/{id}','TrabajoController@eliminar_trabajo');
 
 });
 

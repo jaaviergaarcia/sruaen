@@ -24,6 +24,8 @@
                         <th>Email</th>
                         <th>Tipo</th>
                         <th>Grupo Lab</th>
+                        <th title="Relacion Laboral">Rel. Lab.</th>
+                        <th>Categoria</th>
                         <th>Operación</th>           
                     </tr>
                 </thead>
@@ -36,9 +38,12 @@
                             <td>{{$profesor-> email}}</td>
                             <td>{{$profesor-> tipo}}</td> 
                             <td>{{$profesor-> gpo_lab}}</td>
+                            <td>{{$profesor-> rel_lab}}</td>
+                            <td>{{$profesor-> categoria}}</td>
                             <td>
-                               <a  href="editar_usuario/{{$profesor->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                               <a  href="eliminar_usuario/{{$profesor->id}}" class="btn btn-danger">Eliminar</a>
+                               <a  href="editar_usuario/{{$profesor->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
+
+                               <a  href="eliminar_usuario/{{$profesor->id}}" type="button"  class="btn btn-danger btn-xs" data-toggle="tooltip" title="Da click para borrar"><span class="fa fa-trash"></span></a>
                             </td>          
                         </tr>
                     </tbody>

@@ -60,47 +60,47 @@
   </li>
   <li><a href="#"><span class="icon color6"><i class="fa fa-newspaper-o"></i></span>Articulo<span class="caret"></span></a>
   <ul>
-      <li><a href="nuevo_articulo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="../nuevo_articulo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-book"></i></span>Libro<span class="caret"></span></a>
   <ul>
-      <li><a href="nuevo_libro"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
+      <li><a href="../nuevo_libro"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
   </ul>
   </li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-list-alt"></i></span>Informe<span class="caret"></span></a>
   <ul>
-      <li><a href="nuevo_informe"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
+      <li><a href="../nuevo_informe"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
   </ul>
   </li>
   <li><a href="#"><span class="icon color9"><i class="fa fa-star-o"></i></span>Distinciones/Premios<span class="caret"></span></a>
     <ul>
-      <li><a href="nueva_distincion"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
+      <li><a href="../nueva_distincion"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
     </ul>
   </li>
   <li><a href="#"><span class="icon color10"><i class="fa fa-file-text-o"></i></span>Desarrollo<span class="caret"></span></a>
   <ul>
-      <li><a href="nuevo_desarrollo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="../nuevo_desarrollo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color11"><i class="fa fa-file-o"></i></span>Reseñas<span class="caret"></span></a>
   <ul>
-      <li><a href="nueva_resenia"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="../nueva_resenia"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-copyright"></i></span>Patentes<span class="caret"></span></a>
   <ul>
-      <li><a href="nueva_patente"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="../nueva_patente"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color12"><i class="fa fa-font"></i></span>Trabajos<span class="caret"></span></a>
   <ul>
-      <li><a href="nuevo_trabajo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="../nuevo_trabajo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
   </ul>
   </li>
   <li><a href="#"><span class="icon color14"><i class="fa fa-male"></i></span>Tutorias<span class="caret"></span></a>
   <ul>
-      <li><a href="agregar_tutoria"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
+      <li><a href="../agregar_tutoria"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
      <!-- <li><a href="#"><i class="fa fa-eraser"></i>Eliminar</a></li> -->
   </ul>    
   </li>
