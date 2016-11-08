@@ -40,7 +40,7 @@ Route::get('logout','LoginController@logout');
 Route::group(['middleware' => 'admin'], function () {
 
 
-	Route::get('admin','AdminController@admin');
+	Route::get('Principal','AdminController@admin');
 	/* 
 	|--------------------------------------------------------------------------
 	| RUTAS MODELO PROFESOR-USUARIO
@@ -136,6 +136,19 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('nueva_patente','PatenteController@nuevo_patente');
 	Route::post('guardar_patente','PatenteController@guardar_patente');
 	Route::get('patentes','PatenteController@ver_patentes');
+	Route::get('editar_patente/{id}','PatenteController@editar_patente');
+	Route::post('actualizar_patente/{id}','PatenteController@actualizar_patente');
+	Route::get('eliminar_patente/{id}','PatenteController@eliminar_patente');
+
+		/*
+		|--------------------------------------------------------------------------
+		| RUTAS PARA EL MODELO TRABAJO
+		|--------------------------------------------------------------------------
+		*/
+	Route::get('nuevo_trabajo','TrabajoController@nuevo_trabajo');
+	Route::post('guardar_trabajo','TrabajoController@guardar_trabajo');
+	Route::get('trabajos','TrabajoController@ver_trabajos');
+	Route::get('editar_trabajo/{id}','TrabajoController@editar_trabajo');
 
 });
 
