@@ -21,10 +21,10 @@
                         <th>Año</th>
                         <th>Trabajos</th>
                         <th>Autor</th>
-                        <th data-toggle="tooltip" title="Titulo del trabajo">Titulo del trabajo</th>
-                        <th data-toggle="tooltip" title="Tipo de participación">Tipo de Part</th>
-                        <th data-toggle="tooltip" title="Tipo de la Patente">Tipo P.</th>  
-                        <th data-toggle="tooltip" title="Estado de la Patente">Edo.</th> 
+                        <th title="Titulo del trabajo" data-placement="top"> Titulo del trabajo</th>
+                        <th title="Tipo de participación" data-placement="top">Tipo de Part</th>
+                        <th title="Tipo de la Patente" data-placement="top">Tipo P.</th>  
+                        <th title="Estado de la Patente" data-placement="top">Edo.</th> 
                         <th>Operación</th>        
                     </tr>
                 </thead>
