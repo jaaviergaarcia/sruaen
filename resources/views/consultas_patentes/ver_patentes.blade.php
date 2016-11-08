@@ -5,7 +5,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-title">
-          Listado de Libros en el Sistema 
+          Listado de Patentes en el Sistema 
         </div>
         <div class="panel-body table-responsive">
         @if(Session::has('message'))
