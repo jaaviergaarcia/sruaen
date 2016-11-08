@@ -18,7 +18,7 @@ class LoginController extends Controller {
 	public function entrar(Request $request)
 	{
         //variable           //campo_basedatos                                            
-		$email = ($request->input('email'));
+		$email = strtolower(($request->input('email')));
 		$pass = ($request->input('pass'));
         //obj tipo profesor
 		$profesors = Profesor::all();

@@ -21,7 +21,7 @@ class ProfesorController extends Controller {
 		//declaracion de variables que se mandan a la base
 		$profesor->nombre_prof = $request->input('nombre_prof');
 		$profesor->lastname = $request->input('lastname');
-		$profesor->email = $request->input('email');
+		$profesor->email = strtolower($request->input('email'));
 		$profesor->pass = $request->input('pass');
 		$profesor->tipo= $request->input('tipo');
 		$profesor->gpo_lab = $request->input('gpo_lab');

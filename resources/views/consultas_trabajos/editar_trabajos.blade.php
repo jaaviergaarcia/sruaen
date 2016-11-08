@@ -15,7 +15,8 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal" method="post" action="guardar_trabajo" enctype="multipart/form-data">
+              <form class="form-horizontal"  role="form-horizontal" method="post" enctype="multipart/form-data" 
+              action="{{URL::to('actualizar_trabajo/').'/'.$trabajo -> id}}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Año de Publicacion:</label>
@@ -81,11 +82,32 @@
                   <div class="col-sm-8">
                     <select class="selectpicker" data-style="btn-primary" name="tipo_trab">
                         <option selected disabled value ="000">Seleccione una opcion</option>
-                      @if()
+                      @if($trabajo->tipo_trab == "Art. en Extenso")
+                        <option value="Art. en Extenso" selected="selected" class="selectpicker">Articulo en Extenso</option>
+                        <option value="Conferencia Magistral">Conferencia Magistral</option>
+                        <option value="Ponencia">Ponencia</option>
+                        <option value="Poster">Poster</option>
+                      @elseif($trabajo->tipo_trab == "Conferencia Magistral")
+                        <option value="Art. en Extenso">Articulo en Extenso</option>
+                        <option value="Conferencia Magistral" selected="selected" class="selectpicker" >Conferencia Magistral</option>
+                        <option value="Ponencia">Ponencia</option>
+                        <option value="Poster">Poster</option>                      
+                      @elseif($trabajo->tipo_trab == "Ponencia")
+                        <option value="Art. en Extenso">Articulo en Extenso</option>
+                        <option value="Conferencia Magistral">Conferencia Magistral</option>
+                        <option value="Ponencia"  selected="selected" class="selectpicker">Ponencia</option>
+                        <option value="Poster">Poster</option>
+                      @elseif($trabajo->tipo_trab == "Poster")
+                        <option value="Art. en Extenso">Articulo en Extenso</option>
+                        <option value="Conferencia Magistral">Conferencia Magistral</option>
+                        <option value="Ponencia">Ponencia</option>
+                        <option value="Poster"  selected="selected" class="selectpicker">Poster</option>
+                      @else
                         <option value="Art. en Extenso">Articulo en Extenso</option>
                         <option value="Conferencia Magistral">Conferencia Magistral</option>
                         <option value="Ponencia">Ponencia</option>
                         <option value="Poster">Poster</option>
+                      @endif
                       </select>                  
                   </div>
                 </div>
@@ -93,14 +115,14 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Autor:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Nombre del autor" name="autor">
+                    <input type="text" class="form-control form-control-line" placeholder="Nombre del autor" name="autor" value="{{$trabajo->autor}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Título del trabajo:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Nombre del trabajo" name="titulo_trab">
+                    <input type="text" class="form-control form-control-line" placeholder="Nombre del trabajo" name="titulo_trab" value="{{$trabajo->titulo_trab}}">
                   </div>
                 </div>
 
@@ -110,8 +132,16 @@
                   <div class="col-sm-8">
                     <select class="selectpicker" data-style="btn-primary" name="lugar_evento">
                         <option selected disabled value="000">Seleccione una opcion</option>
+                      @if($trabajo->lugar_evento == "Int")
+                        <option value="Int" selected="selected" class="selectpicker">Internacional</option>
+                        <option value="Nac">Nacional</option>
+                      @elseif($trabajo->lugar_evento == "Nac")
+                        <option value="Int">Internacional</option>
+                        <option value="Nac" selected="selected" class="selectpicker">Nacional</option>
+                      @else
                         <option value="Int">Internacional</option>
                         <option value="Nac">Nacional</option>
+                      @endif
                       </select>                  
                   </div>
                 </div>
@@ -120,7 +150,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Nacionalidad del Evento:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" name="entidad_evento" placeholder="Escriba el País/Estado donde se llevo acabo el evento">
+                    <input type="text" class="form-control form-control-line" name="entidad_evento" placeholder="Escriba el País/Estado donde se llevo acabo el evento" value="{{$trabajo->entidad_evento}}">
                   </div>
                 </div>
 
