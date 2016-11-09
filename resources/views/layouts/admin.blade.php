@@ -171,6 +171,11 @@ Plugin.js - Some Specific JS codes for Plugin Settings
 Bootstrap Select
 ================================================ -->
 <script type="text/javascript" src="js/bootstrap-select/bootstrap-select.js"></script>
+<!-- ================================================
+Data Tables
+================================================ -->
+
+<script src="js/datatables/datatables.min.js"></script>
 @yield('search')
 </body>
 </html>

@@ -152,6 +152,13 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::post('actualizar_trabajo/{id}','TrabajoController@actualizar_trabajo');
 	Route::get('eliminar_trabajo/{id}','TrabajoController@eliminar_trabajo');
 
+	/*
+		|--------------------------------------------------------------------------
+		| RUTAS PARA EL MODELO TURORIAS
+		|--------------------------------------------------------------------------
+		*/
+	Route::get('agregar_tutoria','TutoriasController@nueva_tutoria');
+
 });
 
 /*****************************************/
