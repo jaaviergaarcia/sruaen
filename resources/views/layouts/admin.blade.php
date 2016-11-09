@@ -10,7 +10,6 @@
 
   <!-- ========== Css Files ========== -->
   <link href="css/root.css" rel="stylesheet">
-
   </head>
   <body>
   <!-- Start Page Loading -->
@@ -177,5 +176,7 @@ Data Tables
 
 <script src="js/datatables/datatables.min.js"></script>
 @yield('search')
+
+
 </body>
 </html>
