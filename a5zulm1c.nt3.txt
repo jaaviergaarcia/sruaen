@@ -1,16 +1,19 @@
-﻿Revert "Summary composer requiere dompdf/dompdf"
+﻿REVERT SUMMARY COMPOSER REQUIERE DOMPDF/DOMPDF
 
-This reverts commit 213986d83d3c857aec5e0ec82fe5dfcf074b0d59.
+REVERT SUMMARY COMPOSER REQUIERE DOMPDF/DOMPDF
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 #
-# Date:      Wed Nov 9 19:04:00 2016 -0600
+# Date:      Wed Nov 9 19:09:51 2016 -0600
 #
 # On branch master
 # Your branch is up-to-date with 'origin/master'.
 #
 # Changes to be committed:
-#	modified:   composer.lock
+#	new file:   gqnxgrwb.cu5.txt
+#
+# Changes not staged for commit:
+#	deleted:    gqnxgrwb.cu5.txt
 #
 
