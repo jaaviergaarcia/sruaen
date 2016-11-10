@@ -15,7 +15,7 @@
         </div>
 
             <div class="panel-body">
-              <form class="form-horizontal" method="post" action="guardar_trabajo" enctype="multipart/form-data">
+              <form class="form-horizontal" method="post" action="guardar_tutoria" enctype="multipart/form-data">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label" data-toggle="tooltip" title="Nombre el alumno aignado al docente">Nombre el alumno:</label>
@@ -27,7 +27,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Fecha de ingreso:</label>
                   <div class="col-sm-8">
-                                                                         
+                    <input type="date" name="fecha_in" value="<?php echo date("Y-m-d");?>">
                   </div>
                 </div>
 
@@ -48,7 +48,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label" data-toggle="tooltip" title="Institucion de adscripción del profesor">Institución del profesor:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" name="entidad_evento" placeholder="Institucion de adscripción del profesor">
+                    <input type="text" class="form-control form-control-line" name="institucion_prof" placeholder="Institucion de adscripción del profesor">
                   </div>
                 </div>
 
@@ -68,5 +68,4 @@
 
   </div>
   <!-- End Row -->
-
 @stop

@@ -158,6 +158,12 @@ Route::group(['middleware' => 'admin'], function () {
 		|--------------------------------------------------------------------------
 		*/
 	Route::get('agregar_tutoria','TutoriasController@nueva_tutoria');
+	Route::post('guardar_tutoria','TutoriasController@guardar_tutoria');
+	Route::get('tutorias','TutoriasController@ver_tutorias');
+	Route::get('editar_tutoria/{id}','TutoriasController@editar_tutoria');
+	Route::post('actualizar_tutoria/{id}','TutoriasController@actualizar_tutoria');
+	Route::get
+
 
 });
 
