@@ -161,7 +161,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Lista de Autores</label>
                   <div class="col-sm-8">
-                      <textarea class="form-control" rows="3" id="textarea1" placeholder="Lista de autores, su nombre  en la posicion que se ubica dentro de la lista" name="lista">    
+                      <textarea class="form-control" rows="3" id="textarea1" placeholder="Lista de autores, su nombre  en la posicion que se ubica dentro de la lista" name="lista" > <?php echo $row["lista"]?>
                       </textarea>
                   </div>
                 </div>

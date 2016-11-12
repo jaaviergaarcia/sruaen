@@ -162,8 +162,7 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('tutorias','TutoriasController@ver_tutorias');
 	Route::get('editar_tutoria/{id}','TutoriasController@editar_tutoria');
 	Route::post('actualizar_tutoria/{id}','TutoriasController@actualizar_tutoria');
-	Route::get
-
+	Route::get('eliminar_tutoria/{id}','TutoriasController@eliminar_tutoria');
 
 });
 

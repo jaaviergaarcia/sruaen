@@ -17,11 +17,12 @@
 
             <table id="example0" class="table display">
                 <thead class="thead-inverse">
-                    <tr>
+                    <tr>                      
                         <th>No</th>
                         <th title="Nombre del Alumno">Alumno</th>
                         <th>Fecha de ingreso</th>
-                        <th title="Institución a la que el Alumno pertenece">Institucion A.</th>
+                        <th title="Institución a la que el Alumno pertenece">Institucion </th>
+
                         <th>Profesor</th>
                         <th title="Institución a la que el Profesor pertenece">Institucion P.</th>
                         <th>Operación</th>           
