@@ -187,7 +187,7 @@
                   <label class="col-sm-2 control-label form-label">Lista de Autores</label>
                   <div class="col-sm-8">
                       <textarea class="form-control" rows="" id="textarea1" placeholder="Lista de Autores..." 
-                      name="lista_autor".n12br-> </textarea>
+                      name="lista_autor"></textarea>
                   </div>
                 </div>
 

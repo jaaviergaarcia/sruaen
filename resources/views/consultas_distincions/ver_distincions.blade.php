@@ -23,7 +23,7 @@
                         <th>Distincion/Premio</th>
                         <th>Institución</th>
                         <th>País</th>  
-                        <th>Descripción</th>    
+                        <th title="Descripción del premio">Descripción</th>    
                         <th>Operación</th>
                     </tr>
                 </thead>

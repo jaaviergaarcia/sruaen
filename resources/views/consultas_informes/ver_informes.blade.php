@@ -21,11 +21,11 @@
                         <th>No</th>
                         <th>Fecha</th>
                         <th>Autor</th>
-                        <th>Titulo del Informe</th>
+                        <th title="Título del informe">Título</th>
                         <th>Institución</th>
                         <th>Autor Principal</th>  
                         <th>Varios Autores</th>  
-                        <th>Pos del Autor</th>   
+                        <th title="Número de la posición en la que aparece el Docente">Posición</th>   
                         <th>Lista de autores</th>  
                         <th>Operacion</th>        
                     </tr>

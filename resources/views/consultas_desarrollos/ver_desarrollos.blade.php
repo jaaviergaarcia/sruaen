@@ -19,7 +19,7 @@
                     <tr>
                         <th>No</th>
                         <th>Fecha</th>
-                        <th>Tipo</th>
+                        <th title="Tipo que caracteriza el desarrollo">Tipo</th>
                         <th>Autor</th>
                         <th>Nombre Desarrollo</th>
                         <th>Tipo</th>  

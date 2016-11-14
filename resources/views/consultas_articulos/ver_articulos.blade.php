@@ -19,14 +19,14 @@
                     <tr>
                         <th>No </th>
                         <th>Año</th>
-                        <th>Tipo del Articulo</th>
+                        <th title="Tipo de Libro">Tipo</th>
                         <th>Autor</th>
-                        <th>Titulo del Articulo</th>
+                        <th title="Título del libro">Título</th>
                         <th>Revista</th>
-                        <th>Autor Principal</th>  
-                        <th>Varios Autores</th>  
-                        <th>Pos del Autor</th>   
-                        <th>Lista de autores</th>  
+                        <th title="Autor Principal">Autor. Princ.</th>  
+                        <th title="Varios Autores">VV. AA.</th>  
+                        <th title="Posicón el autor">Posición</th>   
+                        <th title="Lista de Autores">Lista</th>  
                         <th>Operacion</th>        
                     </tr>
                 </thead>
