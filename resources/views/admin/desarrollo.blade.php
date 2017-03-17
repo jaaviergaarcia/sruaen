@@ -76,9 +76,7 @@
                         <option value="No">No</option>
                       </select>                  
                   </div>
-                </div>
-
-             
+                </div>            
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Pais:</label>

@@ -32,6 +32,15 @@ Route::get('iniciar_sesion','LoginController@mostrarinicio_sesion');
 Route::post('entrar','LoginController@entrar');
 Route::get('logout','LoginController@logout');
 
+Route::get('PDF', 'QueryDataController@ConsultasReporte');
+
+	//$pdf = PDF::loadView('pdf_vista.productividad');
+	//return view ('pdf_vista.productividad');
+	//return $pdf->download('productividad.pdf');
+//});
+//ESTA CONSULTA ES PARA COMPROBRAR COMO TRAE LO ELEMENTOS DE LA BASE DE DATOS
+//Route::get('consulta','QueryDataController@ConsultasReporte');
+
 
 
 /*RUTAS PARA EL ADMIN ¿?*/
