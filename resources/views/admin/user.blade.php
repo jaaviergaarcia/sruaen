@@ -167,7 +167,7 @@
                   </div>
                 </div>
 
-                 <div class="form-group">
+                <div class="form-group">
                  <label class="col-sm-2 control-label form-label"></label>
                   <div class="col-sm-4">
                       <button type="submit" class="btn btn-default btn-block">Guardar</button>             

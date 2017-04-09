@@ -15,12 +15,6 @@ use App\Resenia;
 | and give it the controller to call when that URI is requested.
 |
 */
-//rutas para los middleware
-/*
-Route::get('RutaMiddle', ['middleware' => 'Prueba_middle', function(){
-    return '<h1>Hey everybody this shit is vvorking!!</h1>';
-}]); */
-
 
 /*
 |--------------------------------------------------------------------------
@@ -33,13 +27,11 @@ Route::post('entrar','LoginController@entrar');
 Route::get('logout','LoginController@logout');
 
 Route::get('PDF', 'QueryDataController@ConsultasReporte');
+Route::get('generaPDF', 'QueryDataController@generaReporte');
 
 	//$pdf = PDF::loadView('pdf_vista.productividad');
 	//return view ('pdf_vista.productividad');
 	//return $pdf->download('productividad.pdf');
-//});
-//ESTA CONSULTA ES PARA COMPROBRAR COMO TRAE LO ELEMENTOS DE LA BASE DE DATOS
-//Route::get('consulta','QueryDataController@ConsultasReporte');
 
 
 
