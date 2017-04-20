@@ -40,8 +40,12 @@
                             <td>{{$patente-> tipo_pat}}</td>
                             <td>{{$patente-> edo_pat}}</td>
                             <td>
+                            @if(Session::get('tipo')== 'A')
                                <a  href="editar_patente/{{$patente->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
                                <a  href="eliminar_patente/{{$patente->id}}"  type="button" class="btn btn-danger btn-xs" ><span class="fa fa-trash" data-toggle="tooltip" title="Da click para borrar"></span></a>
+                            @elseif(Session::get('tipo') == 'C')
+                              <a  href="editar_patente/{{$patente->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
+                            @endif
                             </td>          
                         </tr>
                     </tbody>

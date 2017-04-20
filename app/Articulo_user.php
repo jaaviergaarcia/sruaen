@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Distincion_profesor extends Model {
+class Articulo_user extends Model {
 
 	//
 

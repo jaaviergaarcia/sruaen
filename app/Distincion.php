@@ -4,9 +4,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Distincion extends Model {
 
-	public function profesores()
+	public function usuarios()
 	{
-		return $this->belongsToMany('App\Profesor', 'Distincion_profesors', 'distincion_id', 'profesor_id');
+		return $this->belongsToMany('App\User', 'Distincion_users', 'distincion_id', 'user_id');
 	}
 
 }

@@ -4,8 +4,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resenia extends Model {
 
-	public function profesores()
+	public function usuarios()
 	{
-		return $this->belongsToMany('App\Profesor', 'Profesor_resenias', 'resenia_id', 'profesor_id');
+		return $this->belongsToMany('App\User', 'Resenia_users', 'resenia_id', 'user_id');
 	}
 }

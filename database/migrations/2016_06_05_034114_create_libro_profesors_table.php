@@ -12,11 +12,11 @@ class CreateLibroProfesorsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('libro_profesors', function(Blueprint $table)
+		Schema::create('libro_users', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('profesor_id')->unsigned();
-			$table->foreign('profesor_id')->references('id')->on('profesors');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 			
 			$table->integer('libro_id')->unsigned();
 			$table->foreign('libro_id')->references('id')->on('libros');
@@ -31,7 +31,7 @@ class CreateLibroProfesorsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('libro_profesors');
+		Schema::drop('libro_users');
 	}
 
 }

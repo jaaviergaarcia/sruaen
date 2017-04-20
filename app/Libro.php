@@ -4,9 +4,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Libro extends Model {
 
-	public function profesores()
+	public function usuarios()
     {
-        return $this->belongsToMany('App\Profesor', 'Libro_profesors', 'libro_id', 'profesor_id');
+        return $this->belongsToMany('App\User', 'Libro_users', 'libro_id', 'user_id');
     }
 
 }

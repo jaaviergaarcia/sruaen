@@ -12,12 +12,12 @@ class CreateArticuloProfesorsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('articulo_profesors', function(Blueprint $table)
+		Schema::create('articulo_users', function(Blueprint $table)
 		{
 			
             $table->increments('id');
-			$table->integer('profesor_id')->unsigned();
-			$table->foreign('profesor_id')->references('id')->on('profesors');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->integer('articulo_id')->unsigned();
 			$table->foreign('articulo_id')->references('id')->on('articulos');
@@ -33,7 +33,7 @@ class CreateArticuloProfesorsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('articulo_profesors');
+		Schema::drop('articulo_users');
 	}
 
 }

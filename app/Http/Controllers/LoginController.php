@@ -3,7 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Redirect;
-Use App\Profesor;
+Use App\User;
 use Session;
 use Auth;
 
@@ -11,43 +11,55 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller {
 
+/*
+     public function __construct()
+    {
+        $this->middleware('auth');
+    } */
+
 	//manda llamar la vista para entrar
 	public function mostrarinicio_sesion(){
 		return view('inicio-sesion');
 	}
+
+
 	public function entrar(Request $request)
 	{
         //variable           //campo_basedatos                                            
 		$email = strtolower(($request->input('email')));
-		$pass = ($request->input('pass'));
+		$password = ($request->input('password'));
+
         //obj tipo profesor
-		$profesors = Profesor::all();
+        $users = User::all();
+		
         //@foreach    @endforeach y se eliminan los {}
-		foreach ($profesors as $profesor) 
+		foreach ($users as $user) 
 		{	
 			//@if    @endif y se eliminan los {}
-			if(($profesor->email==$email) and ($profesor->pass==$pass)) 
+			if(($user->email==$email) and ($user->password==$password)) 
 			{
-				Session::put('id',$profesor->id);
-				Session::put('nombre',$profesor->nombre_prof);
-				Session::put('tipo',$profesor->tipo);
+				Session::put('id',$user->id);
+				Session::put('nombre',$user->nombre_prof);
+				Session::put('tipo',$user->tipo);
 
-				switch ($profesor->tipo) {
+				switch ($user->tipo) {
 					case 'A':
 						return redirect('ver_usuarios');
 						break;
 					
 					case 'C':
-						return redirect('admin');
+						return redirect('Principal');
 						break;
 				}//end switch
 			}//end if			
 		}//end foreach
+
 		//Sesion::flash sirve para enviar/mostrar mensajes 
 	Session::flash('message','Correo o contraseña incorrectos, verique sus datos.');
 	Session::flash('class','danger');
 	return redirect('/');
 	} //end function entrar
+	
 	public function logout()
 	{
 		Session::flush();

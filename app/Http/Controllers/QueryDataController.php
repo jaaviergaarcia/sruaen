@@ -21,7 +21,10 @@ class QueryDataController extends Controller {
 
 	public function generaReporte(){
 
-		$user = DB::table('desarrollos')->get();
+		$user = DB::table('desarrollos')
+		->select(DB::raw('count(*) as des_count, profesor_id'))
+		->where('profesor_id', "=",1)
+		->get();
 		return $user;
 
 		/* $pdf = PDF::loadView('pdf_vista.reporte');

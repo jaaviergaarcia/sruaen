@@ -31,7 +31,7 @@
     <!-- End Sidebar Show Hide Button -->
 
  
-    <!-- Start Top Right -->   
+    <!-- Start Top Right --> 
     <ul class="top-right">
     <li class="dropdown link">
       <a href="#" data-toggle="dropdown" title="Cerrar Sesión" class="dropdown-toggle profilebox"><span class="fa fa-user"></span></a>
@@ -52,19 +52,23 @@
   <li class="sidetitle" data-toggle="tooltip" data-placement="right" title="Menú principal" >MENÚ</li>
   <li><a href="#"><span class="icon color5"><i class="fa fa-users fa-fw"></i></span>Usuarios<span class="caret"></span></a>
     <ul>
+    @if(Session::get('tipo')=='A')
       <li><a href="nuevo_profesor"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
       <li><a href="ver_usuarios"><i class="fa fa-search"></i>Consultar</a></li>
+    @elseif(Session::get('tipo')=='C')
+      <p> Necesitas ser administrador para acceder a estas opciones</p>
+    @endif
+    </ul>
+  </li> 
+  <li><a href="#"><span class="icon color6"><i class="fa fa-newspaper-o"></i></span>Articulo<span class="caret"></span></a>
+   <ul>
+       <li><a href="nuevo_articulo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
     </ul>
   </li>
-  <li><a href="#"><span class="icon color6"><i class="fa fa-newspaper-o"></i></span>Articulo<span class="caret"></span></a>
-  <ul>
-      <li><a href="nuevo_articulo"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>
-  </ul>
-  </li>
   <li><a href="#"><span class="icon color7"><i class="fa fa-book"></i></span>Libro<span class="caret"></span></a>
-  <ul>
-      <li><a href="nuevo_libro"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
-  </ul>
+    <ul>
+        <li><a href="nuevo_libro"><i class="fa fa-plus fa-fw"></i>Agregar</a></li>      
+    </ul>
   </li>
   <li><a href="#"><span class="icon color8"><i class="fa fa-list-alt"></i></span>Informe<span class="caret"></span></a>
   <ul>

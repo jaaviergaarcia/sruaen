@@ -43,8 +43,12 @@
                             <td>{{$informe-> pos_autor}}</td>
                             <td>{{$informe-> lista_autor}}</td>
                             <td>
+                            @if(Session::get('tipo')=='A')
                                <a  href="editar_informe/{{$informe->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
                                <a  href="eliminar_informe/{{$informe->id}}"  type="button" class="btn btn-danger btn-xs" ><span class="fa fa-trash" data-toggle="tooltip" title="Da click para borrar"></span></a>
+                            @elseif(Session::get('tipo')=='C')
+                              <a  href="editar_informe/{{$informe->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
+                            @endif
                             </td>          
                         </tr>
                     </tbody>

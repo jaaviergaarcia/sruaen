@@ -20,7 +20,6 @@
                     <tr>
                         <th>No</th>
                         <th>Nombre</th>
-                        <th>Apellidos</th>
                         <th>Email</th>
                         <th>Tipo</th>
                         <th>Grupo Lab</th>
@@ -33,8 +32,7 @@
                     <tbody>
                         <tr>
                             <td>{{$profesor-> id}}</td>
-                            <td>{{$profesor-> nombre_prof}}</td>
-                            <td>{{$profesor-> lastname}}</td>
+                            <td>{{$profesor-> name}}</td>
                             <td>{{$profesor-> email}}</td>
                             <td>{{$profesor-> tipo}}</td> 
                             <td>{{$profesor-> gpo_lab}}</td>

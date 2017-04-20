@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Session;
 use Redirect;
 use Illuminate\Http\Request;
-use App\Profesor;
+use App\User;
 
 class ProfesorController extends Controller {
 
@@ -16,13 +16,13 @@ class ProfesorController extends Controller {
 
 	public function guardar_profesor(Request $request){
 
-		$profesor = new Profesor;
+		$profesor = new User;
 		//variable propiedad name            campo de la BD
 		//declaracion de variables que se mandan a la base
-		$profesor->nombre_prof = $request->input('nombre_prof');
-		$profesor->lastname = $request->input('lastname');
+		$profesor->name = $request->input('name');
+		//$profesor->lastname = $request->input('lastname');
 		$profesor->email = strtolower($request->input('email'));
-		$profesor->pass = $request->input('pass');
+		$profesor->password = $request->input('password');
 		$profesor->tipo= $request->input('tipo');
 		$profesor->gpo_lab = $request->input('gpo_lab');
 		$profesor->rel_lab = $request->input('rel_lab');
@@ -34,7 +34,7 @@ class ProfesorController extends Controller {
 		$profesor->lgac = $request->input('lgac');
 
 
-		$pass = $request->input('pass');
+		$password = $request->input('password');
 		$passConfirmar = $request->input('passConfirmar');
 
 
@@ -42,10 +42,10 @@ class ProfesorController extends Controller {
 		{
 			if ($profesor->save())
 			{
-				Session::flash('message','Usuario"'.$profesor->nombre_prof.'" ha sido guardado Correctamente');
+				Session::flash('message','Usuario"'.$profesor->name.'" ha sido guardado Correctamente');
 				Session::flash('class','success');				
 			} else{
-				Session::flash('message','Hubo un error al intentar guardar el usuario"'.$profesor->nombre_prof.'" vuleva a intentarlo');
+				Session::flash('message','Hubo un error al intentar guardar el usuario"'.$profesor->name.'" vuleva a intentarlo');
 				Session::flash('class','danger');			
 			}
 
@@ -65,7 +65,7 @@ class ProfesorController extends Controller {
 	public function ver_usuarios()
 	{
 		//declaro variable del tipo del Modelo el cual se le manda se recibe en los las plantillas blade	
-		$profesors = Profesor::All();
+		$profesors = User::All();
 		return view ('consultas_user.ver_usuarios',compact('profesors'));
 	}
 
@@ -73,14 +73,14 @@ class ProfesorController extends Controller {
 	public function editar_usuario($id)
 	{
 
-		$profesor = Profesor::find($id);
+		$profesor = User::find($id);
 		return view('consultas_user.editar_usuarios',compact('profesor')); 
 	}
 
 
 	public function actualizar_usuario($id, Request $request)
 	{
-		$profesor = Profesor::find($id);
+		$profesor = User::find($id);
 		//$profesor-> fill($request->All());
 
 		//variable propiedad name            campo de la BD
@@ -116,7 +116,7 @@ class ProfesorController extends Controller {
 
 	public function eliminar_usuario($id, Request $request)
 	{
-		$profesor = Profesor::find($id);		
+		$profesor = User::find($id);		
 		if ($profesor -> delete())
 		{
 			//mostrar mensajes

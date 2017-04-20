@@ -12,12 +12,12 @@ class CreateDistincionProfesorsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('distincion_profesors', function(Blueprint $table)
+		Schema::create('distincion_users', function(Blueprint $table)
 		{
 			
             $table->increments('id');
-			$table->integer('profesor_id')->unsigned();
-			$table->foreign('profesor_id')->references('id')->on('profesors');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->integer('distincion_id')->unsigned();
 			$table->foreign('distincion_id')->references('id')->on('distincions');
@@ -32,7 +32,7 @@ class CreateDistincionProfesorsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('distincion_profesors');
+		Schema::drop('distincion_users');
 	}
 
 }

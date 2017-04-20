@@ -12,11 +12,11 @@ class CreateProfesorReseniasTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('profesor_resenias', function(Blueprint $table)
+		Schema::create('resenia_users', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('profesor_id')->unsigned();
-			$table->foreign('profesor_id')->references('id')->on('profesors');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 
 			$table->integer('resenia_id')->unsigned();
 			$table->foreign('resenia_id')->references('id')->on('resenias');
@@ -31,7 +31,7 @@ class CreateProfesorReseniasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('profesor_resenias');
+		Schema::drop('resenia_users');
 	}
 
 }

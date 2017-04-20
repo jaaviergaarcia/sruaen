@@ -12,11 +12,12 @@ class CreateInformeProfesorsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('informe_profesors', function(Blueprint $table)
+		Schema::create('informe_users', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('profesor_id')->unsigned();
-			$table->foreign('profesor_id')->references('id')->on('profesors');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
+
 			$table->integer('informe_id')->unsigned();
 			$table->foreign('informe_id')->references('id')->on('informes');
 			$table->timestamps();
@@ -30,7 +31,7 @@ class CreateInformeProfesorsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('informe_profesors');
+		Schema::drop('informe_users');
 	}
 
 }

@@ -12,9 +12,21 @@
   </style>
   </head>
   <body>
+
     <div class="login-form">
       <form action="entrar" method="post" enctype="multipart/form-data">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <!--DESPLIEGA LISTA DE ERRORES -->
+        <!-- /*  if (count($errors) > 0)
+            <div class="alert alert-danger">
+              <strong>Whoops!</strong> There were some problems with your input.<br><br>
+              <ul>
+                foreach ($errors->all() as $error)
+                  <li> {/QUITAR/{ $error }}</li>
+                endforeach
+              </ul>
+            </div>
+          endif*/ -->
           @if(Session::has('message'))
               <div  class="alert alert-{{Session::get('class')}}"> 
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -22,30 +34,21 @@
               </div>
           @endif
             <div class="top">
-              <img src="img/logo-uaen-small.jpg" alt="icon" class="icon">
-              
+              <img src="{{asset('img/logo-uaen-small.jpg')}}" alt="icon" class="icon">
+              <h4>Sistema de Recreaditación, Unidad Académica de Estudios Núcleares</h4>
               <h2>Bienvenido</h2>
             </div>
             <div class="form-area">
+                
                 <div class="group">
                   <input type="email" name="email" class="form-control" placeholder="Email" required="" autofocus="">
                   <i class="fa fa-user"></i>
                 </div>
 
                 <div class="group">
-                  <input type="password" name="pass" class="form-control" placeholder="Password" required="" value="">
+                  <input type="password" name="password" class="form-control" placeholder="Password" required="" value="">
                   <i class="fa fa-key"></i>
                 </div>
-                <!--
-                <div class="group">
-                <label>Seleccione su tipo de usuario</label>                
-                  <select class="selectpicker" data-style="btn-primary" name="tipo" required="">
-                      <option selected disabled value="000">Seleccione una opcion</option>
-                      <option value="A">Administrador</option>
-                      <option value="C">Común</option>
-                  </select>                  
-                </div>  
-                -->
                 <div class="group">
                    <button type="submit" class="btn btn-default btn-block">Entrar</button>       	
                 </div>               

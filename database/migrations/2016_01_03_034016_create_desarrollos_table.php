@@ -15,8 +15,8 @@ class CreateDesarrollosTable extends Migration {
 		Schema::create('desarrollos', function(Blueprint $table)
 		{
 			$table->increments('id'); //PK
-			$table->integer('profesor_id')->unsigned();
-			$table->foreign('profesor_id')->references('id')->on('profesors');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 			$table->integer('fecha_pub');
 			$table->string('tipo_des');
 			$table->string('autor');

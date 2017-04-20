@@ -4,9 +4,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Patente extends Model {
 
-	public function profesor()
+	public function usuario()
 	{
-		return $this->belongsTo('App\Profesor','profesor_id');
+		return $this->belongsTo('App\Profesor','user_id');
 	}
 
 }

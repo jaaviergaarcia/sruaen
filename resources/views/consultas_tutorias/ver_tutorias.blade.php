@@ -43,9 +43,13 @@
                             <td>{{$tutoria-> nombre_prof}}</td> 
                             <td>{{$tutoria-> institucion_prof}}</td>
                             <td>
+                            @if(Session::get('tipo')=='A')
                                <a  href="editar_tutoria/{{$tutoria->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
 
                                <a  href="eliminar_tutoria/{{$tutoria->id}}" type="button"  class="btn btn-danger btn-xs" data-toggle="tooltip" title="Da click para borrar"><span class="fa fa-trash"></span></a>
+                            @elseif(Session::get('tipo')=='C')
+                              <a  href="editar_tutoria/{{$tutoria->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
+                            @endif
                             </td>          
                         </tr>
                     </tbody>

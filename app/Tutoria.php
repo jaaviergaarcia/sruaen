@@ -4,9 +4,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tutoria extends Model {
 
-	public function profesor()
+	public function usuario()
 	{
-		return $this->belongsTo('App\Profesor','profesor_id');
+		return $this->belongsTo('App\User','user_id');
 	}
 
 

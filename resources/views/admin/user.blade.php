@@ -28,16 +28,10 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Nombre:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Nombre del usuario" name="nombre_prof" required="">
+                    <input type="text" class="form-control form-control-line" placeholder="Nombre del usuario" name="name" required="">
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="col-sm-2 control-label form-label">Apellidos:</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-line" placeholder="Apellidos del usuario" name="lastname" required="">
-                  </div>
-                </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">E-mail:</label>
@@ -49,7 +43,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Contraseña:</label>
                   <div class="col-sm-8">
-                    <input type="password" class="form-control form-control-line" placeholder="Introduzca su contraseña" name="pass" required="">
+                    <input type="password" class="form-control form-control-line" placeholder="Introduzca su contraseña" name="password" required="">
                   </div>
                 </div>
                 <div class="form-group">

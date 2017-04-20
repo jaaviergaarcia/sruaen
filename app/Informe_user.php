@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profesor_resenia extends Model {
+class Informe_user extends Model {
 
 	//
 

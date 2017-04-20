@@ -24,7 +24,7 @@
                         <th title="Título del libro">Título</th>
                         <th>Revista</th>
                         <th title="Autor Principal">Autor. Princ.</th>  
-                        <th title="Varios Autores">VV. AA.</th>  
+                        <th title="Varios Autores">V. A.</th>  
                         <th title="Posicón el autor">Posición</th>   
                         <th title="Lista de Autores">Lista</th>  
                         <th>Operacion</th>        
@@ -44,12 +44,12 @@
                             <td>{{$articulo-> pos_autor}}</td>
                             <td>{{$articulo-> lista_autor}}</td>
                             <td>
-                          <!--  @if(Session::get('tipo') == 'A') -->
+                            @if(Session::get('tipo') == 'A') 
                                <a  href="editar_articulos/{{$articulo->id}}"  type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a>
                                <a  href="eliminar_articulo/{{$articulo->id}}"  type="button" class="btn btn-danger btn-xs" ><span class="fa fa-trash" data-toggle="tooltip" title="Da click para borrar"></span></a>
-                          <!--  @elseif(Session::get('tipo') == 'C') 
-                                <a  href="editar_articulos/{{$articulo->id}}" type="button" class="btn btn-primary">Editar</a> <br></br>
-                          <!--  @endif -->
+                            @elseif(Session::get('tipo') == 'C') 
+                                <a  href="editar_articulos/{{$articulo->id}}" type="button" class="btn btn-default btn-xs" ><span class="fa fa-pencil" data-toggle="tooltip" title="Da click para editar"></span></a> <br></br>
+                            @endif 
                             </td>          
                         </tr>
                     </tbody>
