@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'model' => 'App\Profesor',  // Modelo a usar 
+	'model' => 'App\User',  // Modelo a usar 
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
 	|
 	*/
 
-	'table' => 'Profesors', //tabla para autentifcar la sesion
+	'table' => 'Users', //tabla para autentifcar la sesion
 
 	/*
 	|--------------------------------------------------------------------------

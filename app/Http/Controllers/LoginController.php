@@ -11,11 +11,6 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller {
 
-/*
-     public function __construct()
-    {
-        $this->middleware('auth');
-    } */
 
 	//manda llamar la vista para entrar
 	public function mostrarinicio_sesion(){
@@ -39,8 +34,9 @@ class LoginController extends Controller {
 			if(($user->email==$email) and ($user->password==$password)) 
 			{
 				Session::put('id',$user->id);
-				Session::put('nombre',$user->nombre_prof);
+				Session::put('name',$user->name);
 				Session::put('tipo',$user->tipo);
+				session::put('email',$user->email);
 
 				switch ($user->tipo) {
 					case 'A':

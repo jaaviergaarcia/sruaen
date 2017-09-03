@@ -17,13 +17,13 @@ class DesarrolloController extends Controller {
 
 	public function guardar_desarrollo(Request $request){
 
-		$profesor_id = Session::get('id');
+		$user_id = Session::get('id');
 		//return $profesor_id;
 
 		
 		$desarrollo = new Desarrollo;
 
-		$desarrollo->profesor_id = $profesor_id;
+		$desarrollo->user_id = $user_id;
 		$desarrollo->fecha_pub = $request->input('fecha_pub');
 		$desarrollo->tipo_des = $request->input('tipo_des');
 		$desarrollo->autor = $request->input('autor');

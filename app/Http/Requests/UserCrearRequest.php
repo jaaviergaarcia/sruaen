@@ -23,10 +23,10 @@ class UserCrearRequest extends Request {
 	{
 		return [
 
-		'nombre_prof' => 'required',
-		'lastname' => 'required',
-		'email' => 'required|unique:profesors',
-		'pass' => 'required',
+		'name' => 'required',
+		//'lastname' => 'required',
+		'email' => 'required|unique:users',
+		'password' => 'required',
 
 			
 		];

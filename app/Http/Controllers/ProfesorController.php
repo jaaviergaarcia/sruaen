@@ -1,22 +1,31 @@
-<?php namespace App\Http\Controllers;
+<?php 
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests;
-//use App\Http\Requests\UserCrearRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Session;
 use Redirect;
-use Illuminate\Http\Request;
+
 use App\User;
 
 class ProfesorController extends Controller {
 
+
 	public function nuevo_profesor(){
 		return view('admin.user');
+
 	}
 
 	public function guardar_profesor(Request $request){
 
 		$profesor = new User;
+
+
+
 		//variable propiedad name            campo de la BD
 		//declaracion de variables que se mandan a la base
 		$profesor->name = $request->input('name');
@@ -38,7 +47,7 @@ class ProfesorController extends Controller {
 		$passConfirmar = $request->input('passConfirmar');
 
 
-		if($pass == $passConfirmar)
+		if($password == $passConfirmar)
 		{
 			if ($profesor->save())
 			{

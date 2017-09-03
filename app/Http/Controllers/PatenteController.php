@@ -16,13 +16,13 @@ class PatenteController extends Controller {
 
 	public function guardar_patente(Request $request){
 
-		$profesor_id = Session::get('id');
+		$user_id = Session::get('id');
 		//echo "$prosefor_id"; 
 		//$patente = new Patente;
 
 		$patente = new Patente;
 
-		$patente->profesor_id = $profesor_id;
+		$patente->user_id = $user_id;
 		$patente->fecha_pub = $request->input('fecha_pub');
 		$patente->trabajos = $request->input('trabajos');
 		$patente->autor_pat = $request->input('autor_pat');

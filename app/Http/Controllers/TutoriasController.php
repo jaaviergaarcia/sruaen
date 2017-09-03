@@ -16,10 +16,10 @@ class TutoriasController extends Controller {
 	}
 
 	public function guardar_tutoria(Request $request){
-		$profesor_id = Session::get('id');
+		$user_id = Session::get('id');
 
 		$tutoria = new Tutoria;
-		$tutoria->profesor_id = $profesor_id;
+		$tutoria->user_id = $user_id;
 		$tutoria->nombre_alum  = $request->input('nombre_alum');
 		$tutoria->fecha_in =$request->input('fecha_in');
 		$tutoria->institucion_alum = $request->input('institucion_alum');
@@ -73,15 +73,18 @@ class TutoriasController extends Controller {
 	}
 
 	public function eliminar_tutoria($id, Request $request){
+
 		$tutoria = Tutoria::find($id);
 
 		if($tutoria->delete()){
-         Session::flash('messager','La tutoria fue eliminada correctamente');
+         	Session::flash('messager','La tutoria fue eliminada correctamente');
 			Session::flash('class','success');
 		} else{
 			Session::flash('messager','La tutoria no fue eliminada correctamente');
 			Session::flash('class','danger');
 		}
+		return redirect('tutorias');
+
 	}
 
 	

@@ -16,11 +16,11 @@ class TrabajoController extends Controller {
 
 	public function guardar_trabajo(Request $request){
 
-		$profesor_id = Session::get('id');
+		$user_id = Session::get('id');
 
 		$trabajo = new Trabajo;
 
-		$trabajo->profesor_id = $profesor_id;
+		$trabajo->user_id = $user_id;
 		$trabajo->fecha_pub = $request->input('fecha_pub');
 		$trabajo->tipo_trab = $request->input('tipo_trab');
 		$trabajo->autor = $request->input('autor');

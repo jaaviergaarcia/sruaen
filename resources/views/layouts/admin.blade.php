@@ -30,16 +30,17 @@
     <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
     <!-- End Sidebar Show Hide Button -->
 
- 
     <!-- Start Top Right --> 
-    <ul class="top-right">
+    @if(Session::has('name'))
+    <ul class="top-right"> Has iniciado sesión como: {{Session::get('name')}}
     <li class="dropdown link">
-      <a href="#" data-toggle="dropdown" title="Cerrar Sesión" class="dropdown-toggle profilebox"><span class="fa fa-user"></span></a>
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><span class="fa fa-user"></span></a>
         <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
-          <li><a href="logout"><i class="fa falist fa-power-off"></i> Logout</a></li>
+          <li><a href="logout"><i class="fa falist fa-power-off"></i> Logout </a></li>
         </ul>
     </li>
     </ul>
+    @endif
     <!-- End Top Right -->
 
   </div>

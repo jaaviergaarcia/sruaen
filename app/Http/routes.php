@@ -36,11 +36,6 @@ Route::get('generaPDF', 'QueryDataController@generaReporte');
 
 
 
-
-
-
-
-
 Route::group(['middleware' => 'admin'], function () {
 
 	Route::get('Principal','AdminController@admin');
@@ -189,7 +184,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('articulos','ArticuloController@articulos');  //vista de los almacenados
 	Route::get('editar_articulos/{id}','ArticuloController@editar_articulos');
 	Route::post('actualizar_articulo/{id}','ArticuloController@actualizar_articulo');
-	Route::get('eliminar_articulo/{id}','ArticuloController@eliminar_articulo');
+	//Route::get('eliminar_articulo/{id}','ArticuloController@eliminar_articulo');
 
 		/*PARA EL MODELO DE DISTINCION*/
 	Route::get('nueva_distincion','DistincionController@nueva_distincion');
@@ -197,7 +192,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('distinciones','DistincionController@distinciones');				//vista de los almacenados
 	Route::get('editar_distincion/{id}','DistincionController@editar_distincion');
 	Route::post('actualizar_distincion/{id}','DistincionController@actualizar_distincion');
-	Route::get('eliminar_distincion/{id}','DistincionController@eliminar_distincion');
+	//Route::get('eliminar_distincion/{id}','DistincionController@eliminar_distincion');
 		/*
 		|--------------------------------------------------------------------------
 		| RUTAS PARA EL MODELO INFORME
@@ -208,7 +203,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('informes','InformeController@informes');             //vista de los informes almacenados
 	Route::get('editar_informe/{id}','InformeController@editar_informe');
 	Route::post('actualizar_informe/{id}','InformeController@actualizar_informe');
-	Route::get('eliminar_informe/{id}','InformeController@eliminar_informe');
+	//Route::get('eliminar_informe/{id}','InformeController@eliminar_informe');
 		/*
 		|-------------------------------------------------------------------------
 		| RUTAS PARA EL MODELO LIBRO
@@ -219,7 +214,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('libros','LibroController@libros');    //vista de los almacenados
 	Route::get('editar_libro/{id}','LibroController@editar_libro');
 	Route::post('actualizar_libro/{id}','LibroController@actualizar_libro');
-	Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
+	//Route::get('eliminar_libro/{id}','LibroController@eliminar_libro');
 		
 		/*
 		|--------------------------------------------------------------------------
@@ -231,7 +226,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('resenias','ReseniaController@resenias');
 	Route::get('editar_resenias/{id}','ReseniaController@editar_resenias');
 	Route::post('actualizar_resenia/{id}','ReseniaController@actualizar_resenia');
-	Route::get('eliminar_resenia/{id}','ReseniaController@eliminar_resenia');
+	//Route::get('eliminar_resenia/{id}','ReseniaController@eliminar_resenia');
 
 /*
 |--------------------------------------------------------------------------
@@ -248,7 +243,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('desarrollos','DesarrolloController@ver_desarrollos');
 	Route::get('editar_desarrollo/{id}','DesarrolloController@editar_desarrollo');
 	Route::post('actualizar_desarrollo/{id}','DesarrolloController@actualizar_desarrollo');
-	Route::get('eliminar_desarrollo/{id}','DesarrolloController@eliminar_desarrollo');
+	//Route::get('eliminar_desarrollo/{id}','DesarrolloController@eliminar_desarrollo');
 
 		/*
 		|--------------------------------------------------------------------------
@@ -260,7 +255,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('patentes','PatenteController@ver_patentes');
 	Route::get('editar_patente/{id}','PatenteController@editar_patente');
 	Route::post('actualizar_patente/{id}','PatenteController@actualizar_patente');
-	Route::get('eliminar_patente/{id}','PatenteController@eliminar_patente');
+	//Route::get('eliminar_patente/{id}','PatenteController@eliminar_patente');
 
 		/*
 		|--------------------------------------------------------------------------
@@ -272,7 +267,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('trabajos','TrabajoController@ver_trabajos');
 	Route::get('editar_trabajo/{id}','TrabajoController@editar_trabajo');
 	Route::post('actualizar_trabajo/{id}','TrabajoController@actualizar_trabajo');
-	Route::get('eliminar_trabajo/{id}','TrabajoController@eliminar_trabajo');
+	//::get('eliminar_trabajo/{id}','TrabajoController@eliminar_trabajo');
 
 	/*
 		|--------------------------------------------------------------------------
@@ -284,7 +279,7 @@ Route::group(['middleware' => 'comun'], function() {
 	Route::get('tutorias','TutoriasController@ver_tutorias');
 	Route::get('editar_tutoria/{id}','TutoriasController@editar_tutoria');
 	Route::post('actualizar_tutoria/{id}','TutoriasController@actualizar_tutoria');
-	Route::get('eliminar_tutoria/{id}','TutoriasController@eliminar_tutoria');
+	//Route::get('eliminar_tutoria/{id}','TutoriasController@eliminar_tutoria');
 
 });
 
