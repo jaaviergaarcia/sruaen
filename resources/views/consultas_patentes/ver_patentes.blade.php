@@ -29,6 +29,11 @@
                     </tr>
                 </thead>
                 @foreach ($patentes as $patente)
+
+                  <?php 
+                    $old_date = date_create("$patente->fecha_pub");
+                    $new_date = date_format($old_date, "d/m/Y");
+                  ?>
                     <tbody>
                         <tr>
                             <td>{{$patente-> id}}</td>

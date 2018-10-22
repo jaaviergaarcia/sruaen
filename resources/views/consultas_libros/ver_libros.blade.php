@@ -23,7 +23,7 @@
                         <th>Autor</th>
                         <th title="Título del libro">Titulo</th>
                         <th>Editorial</th>
-                        <th title="Total de autores">Total de Autores</th>  
+                        <th title="Total de autores">T. A.</th>  
                         <th title="No. de posición del  autor en la lista">Posición</th>   
                         <th>Lista de autores</th>  
                         <th>ISBN</th>

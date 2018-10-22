@@ -21,15 +21,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label form-label">Año de Publicacion:</label>
                   <div class="col-sm-8">
-                    <select class="selectpicker" data-style="btn-primary" name="fecha_pub" required="">
-                        <option selected disabled value="000">Seleccione una opcion</option>
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                      </select>                  
+                     <input type="date" name="fecha_pub" value="<?php echo date("Y-m-d");?>">           
                   </div>
                 </div>
 

@@ -24,7 +24,7 @@
           @endif
             <div class="top">
               <img src="{{asset('img/logo-uaen-small.jpg')}}" alt="icon" class="icon">
-              <h4>Sistema de Recreaditación, Unidad Académica de Estudios Núcleares</h4>
+              <h4>Sistema de Recreaditación <br> Unidad Académica de Estudios Núcleares</h4>
               <h2>Bienvenido</h2>
             </div>
             <div class="form-area">
